@@ -26,8 +26,11 @@
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.6.2" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
+          <element id="library" level="project" name="Maven: org.apache.maven:maven-slf4j-provider:3.6.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.29" />
+          <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-shared-utils:3.2.1" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.5" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:5.0.1" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
