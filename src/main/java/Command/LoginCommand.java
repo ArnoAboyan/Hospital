@@ -17,6 +17,10 @@ static final Logger logger = Logger.getLogger(LoginCommand.class);
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {
         String login = req.getParameter("login");
        logger.info("login ==>" + login);
+        logger.debug("login ==>" + login);
+        logger.warn("login ==>" + login);
+        logger.error("login ==>" + login);
+        logger.trace("login ==>" + login);
         DoctorDao doctorDao = new DoctorDao();
         Doctor doctor = doctorDao.getByLogin(login);
 //        logger.debug(user);

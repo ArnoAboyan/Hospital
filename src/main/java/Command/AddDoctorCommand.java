@@ -7,12 +7,15 @@ import entitys.Doctor;
 import entitys.Role;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 
 public class AddDoctorCommand implements Command {
-
+    static final Logger logger = Logger.getLogger(AddDoctorCommand.class);
     //update doctor and nurse information
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {
+        logger.info("Execute ==> AddDoctorCommand...");
+
             Doctor doctor = new Doctor();
 
 
@@ -57,7 +60,7 @@ public class AddDoctorCommand implements Command {
         DoctorDao doctorDao = new DoctorDao();
          doctorDao.create(doctor);
 
-
+        logger.info("New doctor create => " + doctor);
 
 
         return "controller?command=adminpagecommand&page=1";

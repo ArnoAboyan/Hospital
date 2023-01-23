@@ -9,14 +9,17 @@ import entitys.Patient;
 import entitys.Role;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 
 import java.sql.Date;
 
 public class AddPatientCommand implements Command{
 
-
+    static final Logger logger = Logger.getLogger(AddPatientCommand.class);
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {
+
+        logger.info("Execute ==> AddPatientCommand...");
 
         Patient patient = new Patient();
 
@@ -49,10 +52,12 @@ public class AddPatientCommand implements Command{
         } else throw new CommandException("The entered gender is not correct");
 
 
-        System.out.println(patient);
 
         PatientDao patientDao = new PatientDao();
         patientDao.create(patient);
+
+
+        logger.info("New patient create => " + patient);
 
         return "controller?command=patientlistcommand&page=1";
     }
