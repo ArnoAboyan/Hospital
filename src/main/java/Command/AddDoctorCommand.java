@@ -54,9 +54,6 @@ public class AddDoctorCommand implements Command {
             }else throw  new CommandException("The entered role is not correct");
 
 
-
-        System.out.println(doctor);
-
         DoctorDao doctorDao = new DoctorDao();
          doctorDao.create(doctor);
 

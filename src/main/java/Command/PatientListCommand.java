@@ -8,15 +8,18 @@ import entitys.Doctor;
 import entitys.Patient;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
+
 import java.util.List;
-import java.util.logging.Logger;
 
 public class PatientListCommand implements Command {
-    private static final Logger logger = Logger.getLogger(PatientListCommand.class.getName());
+    static final org.apache.log4j.Logger logger = Logger.getLogger(PatientListCommand.class);
 
-
+       //show all patient with sort and pagination for admin//
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {
+        logger.info("Execute ==> PatientListCommand...");
+
 
 //check role
         Doctor user = (Doctor) req.getSession().getAttribute("currentUser");
@@ -28,8 +31,11 @@ public class PatientListCommand implements Command {
         String role = user.getRole().getTitle();
 
         if(!role.equalsIgnoreCase("admin")) {
+            logger.error("Check role " + role + " FALSE");
             return "error.jsp";
         }
+
+        logger.info("Check role " + role + " CORRECT");
 
         DoctorDao doctorDaoList = new DoctorDao();
         List<Doctor> doctorList = doctorDaoList.getDoctorByRole(2);
@@ -39,10 +45,10 @@ public class PatientListCommand implements Command {
         logger.info("get " + sort);
         PatientDao patientDao = new PatientDao();
         if (sort == null) {
-            logger.info("sort in if");
+            logger.info("execute without sort");
             return executeWithOutSort(req, patientDao);
         } else {
-            logger.info("sort in else");
+            logger.info("execute with sort");
             return executeWithSort(req, patientDao, sort);
         }
     }
@@ -63,12 +69,13 @@ public class PatientListCommand implements Command {
         System.out.println(countPage);
             logger.info("countPage =  " + countPage);
         if (patientList == null) {
-                logger.warning("list Room = null");
-            throw new CommandException("Error can`t get patients");
+                logger.error("patientList = null");
+            throw new CommandException("Can`t get patients");
         } else {
             req.getSession().setAttribute("allPatients", patientList);
             req.setAttribute("page", page);
             req.setAttribute("countPage", countPage);
+            logger.info("req.setAttributes => Correct");
             return "patientlist.jsp";
         }
     }
@@ -82,22 +89,22 @@ public class PatientListCommand implements Command {
 
 
         String page = req.getParameter("page");
-//        logger.info("get " + page);
+        logger.info("get " + page);
         int i = Integer.parseInt(page);
         List<Patient> patientList = patientDao.getAllWithLimitAndOrderBy(i, 5, sort);
         System.out.println(patientList);
         int countPage = (int) Math.ceil((double)patientDao.getCountPatient()/5);
         System.out.println(countPage);
-//        logger.info("countPage =  " + countPage);
+        logger.info("countPage =  " + countPage);
         if (patientList == null) {
-//            logger.error("patientList = null");
-            throw new CommandException("Error we can get patients");
+            logger.error("patientList = null");
+            throw new CommandException("Can`t get patients");
         } else {
-//            logger.info(patientList);
             req.getSession().setAttribute("allPatients", patientList);
             req.setAttribute("page", page);
             req.setAttribute("countPage", countPage);
             req.setAttribute("sort", sort);
+            logger.info("req.setAttributes => Correct");
             return "patientlist.jsp";
         }
     }
