@@ -227,7 +227,6 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
                 hospitalCard.setProcedures(resultSet.getString("procedures"));
                 hospitalCard.setMedications(resultSet.getString("medications"));
                 hospitalCard.setOperations(resultSet.getString("operations"));
-
                 hospitalCardlist.add(hospitalCard);
             }
             logger.info("getAllWithLimitAndOrderBy method => CORRECT");

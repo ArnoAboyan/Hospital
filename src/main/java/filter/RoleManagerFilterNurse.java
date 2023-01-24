@@ -10,10 +10,10 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 
 //filter check role doctor
-@WebFilter(urlPatterns = {"/admin.jsp" ,"/appointmentlist.jsp", "/patientlist.jsp", "/hospitalcardfornurse.jsp", "/hospitalcardlist.jsp", "/patientlistbydoctoradmin.jsp"})
-public class RoleManagerFilter implements Filter {
+@WebFilter(urlPatterns = {"/admin.jsp" ,"/appointmentlist.jsp", "/patientlist.jsp",  "/patientlistbydoctoradmin.jsp", "/patientlistbydoctor.jsp", "/patientlistbydoctoradmin.jsp"})
+public class RoleManagerFilterNurse implements Filter {
 
-    static final Logger logger = Logger.getLogger(RoleManagerFilter.class);
+    static final Logger logger = Logger.getLogger(RoleManagerFilterNurse.class);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -33,12 +33,12 @@ public class RoleManagerFilter implements Filter {
 
             String role = currentDoctor.getRole().getTitle();
 
-            if (!role.equalsIgnoreCase("doctor")) {
-                logger.info("Doctor find and conformed ... OK ");
+            if (!role.equalsIgnoreCase("nurse")) {
+                logger.info("Nurse find and conformed ... OK ");
                 chain.doFilter(req, response);
 
             } else {
-                logger.error("User role not doctor");
+                logger.error("User role not nurse");
                 resp.sendRedirect("index.jsp");
             }
         }

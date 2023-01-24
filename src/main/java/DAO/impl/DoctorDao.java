@@ -138,8 +138,8 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
                 doctor.setCountOfPatients(resultSet.getInt("countofpatients"));
 
                 doctorList.add(doctor);
-                logger.info("getAll method => CORRECT");
             }
+            logger.info("getAll method => CORRECT");
         } catch (SQLException e) {
             logger.error("getAll method => FALSE " + e.getMessage());
             throw new RuntimeException(e);

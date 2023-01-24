@@ -56,7 +56,7 @@ public class HospitalCardList implements Command {
         req.setAttribute("allDoctors", doctorList);
 
         String page = req.getParameter("page");
-            logger.info("get " + page);
+            logger.info("get page " + page);
         int i = Integer.parseInt(page);
         List<HospitalCard> hospitalCard = hospitalCardDao.getAllWithLimit(i, 5);
         System.out.println(hospitalCard);
@@ -85,7 +85,7 @@ public class HospitalCardList implements Command {
 
 
         String page = req.getParameter("page");
-        logger.info("get " + page);
+        logger.info("get page" + page);
         int i = Integer.parseInt(page);
         List<HospitalCard> hospitalCard = hospitalCardDao.getAllWithLimitAndOrderBy(i, 5, sort);
         System.out.println(hospitalCard);
