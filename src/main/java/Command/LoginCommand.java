@@ -18,7 +18,7 @@ static final Logger logger = Logger.getLogger(LoginCommand.class);
         logger.info("Execute ==> LoginCommand...");
 
         String login = req.getParameter("login");
-       logger.info("login ==>" + login);
+       logger.info("login ==> " + login);
         DoctorDao doctorDao = new DoctorDao();
         Doctor doctor = doctorDao.getByLogin(login);
 
@@ -37,7 +37,7 @@ static final Logger logger = Logger.getLogger(LoginCommand.class);
                 req.getSession().setAttribute("currentUser", doctor);
 
                 Role role = doctor.getRole();
-              logger.info("LoginCommand get user with role = " + role.getTitle());
+              logger.info("Get user with role = " + role.getTitle());
 
                 if(role.getTitle().equalsIgnoreCase("admin")) {
                     logger.info("Continue with role ==> Admin");

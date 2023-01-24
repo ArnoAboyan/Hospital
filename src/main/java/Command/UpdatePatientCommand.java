@@ -11,7 +11,7 @@ import java.sql.Date;
 
 public class UpdatePatientCommand implements Command{
 
-    static final org.apache.log4j.Logger logger = Logger.getLogger(UpdatePatientCommand.class);
+    static final Logger logger = Logger.getLogger(PatientListByDoctor.class);
     //update patient information//
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {

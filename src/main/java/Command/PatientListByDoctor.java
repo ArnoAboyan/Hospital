@@ -45,7 +45,6 @@ public class PatientListByDoctor implements Command {
         }else if (role.equalsIgnoreCase("doctor")){
             logger.info("Check role => " + role);
             String sort = req.getParameter("sort");
-        logger.info("get " + sort);
             PatientDao patientDao = new PatientDao();
             int doctorid = Integer.parseInt(req.getParameter("patientsfordoctorid"));
             if (sort == null) {

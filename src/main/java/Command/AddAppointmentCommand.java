@@ -32,6 +32,7 @@ public class AddAppointmentCommand implements Command {
         String appointmentdate = (req.getParameter("appointmentdata"));
         System.out.println(appointmentdate);
 
+
         Appointment appointment = new Appointment();
 
         if (doctorID > 0) {

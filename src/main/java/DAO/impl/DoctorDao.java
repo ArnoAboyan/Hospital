@@ -1,11 +1,13 @@
 package DAO.impl;
 
+import Command.PatientListByDoctor;
 import DAO.DAOException;
 import DAO.EntityDAO;
 import Util.AttributFinal;
 import Util.ConnectionPool;
 import entitys.Appointment;
 import entitys.Doctor;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -14,16 +16,13 @@ import java.util.List;
 
 public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
-//   private final ConnectionPool instance = ConnectionPool.getInstance();
-//    public DoctorDao() throws DAOException {
-//        this.instance = ConnectionPool.getInstance();
-////        logger.info("Created OrderDAO and given Data Source");
-//    }
 
+
+    static final Logger logger = Logger.getLogger(DoctorDao.class);
 
     @Override
     public boolean create(Doctor doctor) {
-
+        logger.info("Start create method...");
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.ADDDOCTOR);) {
             System.out.println("STATEMENT PREPARED");
@@ -36,8 +35,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
 
             preparedStatement.executeUpdate();
-            System.out.println("Create " + doctor);
+            logger.info("create method => CORRECT");
         } catch (SQLException e) {
+            logger.error("create method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return true;
@@ -45,6 +45,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
     @Override
     public Doctor getByID(Integer integer) throws DAOException {
+        logger.info("Start getByID method...");
         Doctor doctor = new Doctor();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -61,8 +62,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
             doctor.setDoctorSurname(resultSet.getString("doctor_surname"));
             doctor.setCategory(resultSet.getInt("category_id"));
             doctor.setCountOfPatients(resultSet.getInt("countofpatients"));
-
+            logger.info("getByID method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getByID method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -76,7 +78,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
     }
 
     public boolean updateDoctorById(Doctor doctor, int doctorid) {
-
+        logger.info("Start updateDoctorById method...");
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.UPDATE_DOCTOR_BY_ID);) {
             System.out.println("STATEMENT PREPARED");
@@ -90,8 +92,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
 
             preparedStatement.executeUpdate();
-            System.out.println("Update " + doctor);
+            logger.info("updateDoctorById method => CORRECT");
         } catch (SQLException e) {
+            logger.error("updateDoctorById method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return true;
@@ -100,13 +103,15 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
     @Override
     public void delete(Integer doctorid) {
-
+        logger.info("Start delete method...");
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.DELETEDOCTOR);) {
             preparedStatement.setInt(1, doctorid);
 
             preparedStatement.executeUpdate();
+            logger.info("delete method => CORRECT");
         } catch (SQLException e) {
+            logger.error("delete method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -114,6 +119,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
     @Override
     public List<Doctor> getAll() throws DAOException {
+        logger.info("Start getAll method...");
         List<Doctor> doctorList = new ArrayList<>();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -132,15 +138,17 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
                 doctor.setCountOfPatients(resultSet.getInt("countofpatients"));
 
                 doctorList.add(doctor);
-                System.out.println(doctor);
+                logger.info("getAll method => CORRECT");
             }
         } catch (SQLException e) {
+            logger.error("getAll method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return doctorList;
     }
 
     public Doctor getByLogin(String login) throws DAOException {
+        logger.info("Start getByLogin method...");
         Doctor doctor = new Doctor();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -158,8 +166,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
             doctor.setCategory(resultSet.getInt("category_id"));
             doctor.setCountOfPatients(resultSet.getInt("countofpatients"));
 
-
+            logger.info("getByLogin method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getByLogin method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -167,7 +176,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
     }
 
     public List<Doctor> getDoctorByRole(Integer roleId) throws DAOException {
-
+        logger.info("Start getDoctorByRole method...");
         List<Doctor> doctorList = new ArrayList<>();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -187,14 +196,18 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
                 doctor.setCountOfPatients(resultSet.getInt("countofpatients"));
 
                 doctorList.add(doctor);
+
             }
+            logger.info("getDoctorByRole method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getDoctorByRole method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return doctorList;
     }
 
     public List<Doctor> getAllWithLimitAndOrderBy(int start, int count, String sort) throws DAOException {
+        logger.info("Start getAllWithLimitAndOrderBy method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -223,13 +236,16 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
                 doctorList.add(doctor);
 
             }
+            logger.info("getAllWithLimitAndOrderBy method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimitAndOrderBy method => FALSE " + e.getMessage());
             throw new DAOException("Can not get doctor. ", e);
         }
         return doctorList;
     }
 
     public List<Doctor> getAllWithLimit(int start, int count) throws DAOException {
+        logger.info("Start getAllWithLimit method...");
 
         start = start - 1;
         if (start != 0) {
@@ -256,15 +272,18 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
                 doctorList.add(doctor);
             }
+            logger.info("getAllWithLimit method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimit method => FALSE " + e.getMessage());
             throw new DAOException("Can not get all Doctor. ", e);
         }
         return doctorList;
     }
 
     public Integer getCountDoctor() throws DAOException {
-        int result = 0;
+        logger.info("Start getCountDoctor method...");
 
+        int result = 0;
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.COUNT_OF_DOCTOR)) {
@@ -274,8 +293,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
                 result = resultSet.getInt(1);
 
             }
-
+            logger.info("getCountDoctor method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getCountDoctor method => FALSE " + e.getMessage());
             throw new DAOException("Can not get count Patient");
         }
 
@@ -283,8 +303,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
     }
 
     public Integer getCountOfPatientsByDoctor(int doctorid) throws DAOException {
-        int result = 0;
+        logger.info("Start getCountOfPatientsByDoctor method...");
 
+        int result = 0;
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.GET_COUNT_PATIENT_BY_DOCTOR_ID)) {
@@ -295,8 +316,9 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
                 result = resultSet.getInt(1);
 
             }
-
+            logger.info("getCountOfPatientsByDoctor method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getCountOfPatientsByDoctor method => FALSE " + e.getMessage());
             throw new DAOException("Can not get count Patient");
         }
 
@@ -304,6 +326,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
     }
 
     public boolean updateCountOfPatients(int count, int doctorId) {
+        logger.info("Start updateCountOfPatients method...");
 
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -314,20 +337,23 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
             preparedStatement.executeUpdate();
 
+            logger.info("updateCountOfPatients method => CORRECT");
         } catch (SQLException e) {
+            logger.error("updateCountOfPatients method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return true;
     }
 
-    //method check email is exist
+    //method check login is exist
     public boolean isExistLogin(String login) throws DAOException {
+        logger.info("Start isExistLogin method...");
 
 
         Doctor doctor = new Doctor();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.CHECK_DOCTOR_AVAILABILITY_BY_EMAIL);) {
+             PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.CHECK_DOCTOR_AVAILABILITY_BY_LOGIN);) {
             preparedStatement.setString(1, login);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -337,20 +363,25 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
             if (doctor.getLogin() != null) {
                 //if exist
+                logger.info("Find doctor by login " + login + " => TRUE ");
+                logger.info("isExistLogin method => CORRECT");
                 return true;
             } else {
                 //if not exist
+                logger.info("Find doctor by login " + login + " => FALSE ");
                 return false;
             }
 
         } catch (SQLException e) {
-//            logger.error("Can not do isExistEmail, SQLException = " + e.getMessage());
+            logger.error("isExistLogin method => FALSE " + e.getMessage());
             throw new DAOException(e);
         }
 
     }
 
     public boolean isExistById(int doctorid) throws DAOException {
+        logger.info("Start isExistById method...");
+
         Doctor doctor = new Doctor();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -364,14 +395,17 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
             if (doctor.getDoctorId() > 0) {
                 //if exist
+                logger.info("Find doctor by doctorid " + doctorid + " => TRUE ");
+                logger.info("isExistById method => CORRECT");
                 return true;
             } else {
                 //if not exist
+                logger.info("Find doctor by doctorid " + doctorid + " => FALSE ");
                 return false;
             }
 
         } catch (SQLException e) {
-//            logger.error("Can not do isExistEmail, SQLException = " + e.getMessage());
+            logger.error("isExistById method => FALSE " + e.getMessage());
             throw new DAOException(e);
         }
     }

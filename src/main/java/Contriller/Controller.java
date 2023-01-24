@@ -9,20 +9,24 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
 //FRONT CONTROLLER
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
+    static final org.apache.log4j.Logger logger = Logger.getLogger(Controller.class);
 
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-//        logger.info("front controller method get have character encoding" + req.());
+        logger.info("Execute ==> Controller doGet...");
+
+        req.setCharacterEncoding("UTF-8");;
         String commandName = req.getParameter("command");
-//        logger.debug("command ==>" + commandName);
+        logger.info("command ==>" + commandName);
 
         Command command = CommandContainer.getCommand(commandName);
         String address = "error.jsp";
@@ -30,7 +34,7 @@ public class Controller extends HttpServlet {
             address = command.execute(req, resp);
         } catch (Exception e) {
             String back = req.getHeader("Referer");
-//           logger.info("Controller get backlink= " + back);
+           logger.info("Controller get backlink= " + back);
             req.getSession().setAttribute("back", back);
 
             req.setAttribute("exception", e.getMessage());
@@ -41,9 +45,9 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.info("Execute ==> Controller doPost...");
         //set encoding
         req.setCharacterEncoding("UTF-8");
-//        logger.info("front controller method post have character encoding" + req.());
 
         String commandName = req.getParameter("command");
 
@@ -54,10 +58,8 @@ public class Controller extends HttpServlet {
         } catch (CommandException | DAOException e) {
             //get link back
             String back = req.getHeader("Referer");
-//            logger.info("Controller get backlink= " + back);
+            logger.info("Controller get backlink= " + back);
             req.getSession().setAttribute("back", back);
-
-            //logger.info("Controller update backlink= " + substring);
             req.getSession().setAttribute("exception", e.getMessage());
         } catch (SQLException e) {
             throw new RuntimeException(e);

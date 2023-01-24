@@ -1,22 +1,26 @@
 package DAO.impl;
 
+import Command.PatientListByDoctor;
+import Command.UpdatePatientCommand;
 import DAO.DAOException;
 import DAO.EntityDAO;
 import Util.AttributFinal;
 import Util.ConnectionPool;
 import entitys.Appointment;
 import entitys.Doctor;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
+
+    static final Logger logger = Logger.getLogger(PatientListByDoctor.class);
     @Override
     public boolean create(Appointment appointment) {
-
-
-
+        logger.info("Start create method...");
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.ADDDAPPOINTMENT);) {
 
@@ -26,8 +30,9 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
             preparedStatement.setTimestamp(3, timestamp);
 
             preparedStatement.executeUpdate();
-
+            logger.info("create method => CORRECT");
         } catch (SQLException e) {
+            logger.error("create method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return true;
@@ -45,7 +50,7 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
 
     @Override
     public void delete(Integer appointmentid) {
-
+        logger.info("Start delete method...");
 
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -53,7 +58,10 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
             preparedStatement.setInt(1, appointmentid);
 
             preparedStatement.executeUpdate();
+
+            logger.info("delete method => CORRECT");
         } catch (SQLException e) {
+            logger.error("delete method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -62,7 +70,7 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
 
     @Override
     public List<Appointment> getAll() throws DAOException {
-
+        logger.info("Start getAll method...");
         List<Appointment> appointmentList = new ArrayList<>();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -78,16 +86,17 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
 
 
                 appointmentList.add(appointment);
-                System.out.println(appointment);
+                logger.info("getAll method => CORRECT");
             }
         } catch (SQLException e) {
+            logger.error("getAll method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return appointmentList;
     }
 
     public List<Appointment> getAppointmentByDoctorId(Integer integer) throws DAOException {
-
+        logger.info("Start getAppointmentByDoctorId method...");
 
         List<Appointment> appointmentList = new ArrayList<>();
 
@@ -105,16 +114,17 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
 
 
                 appointmentList.add(appointment);
-                System.out.println(appointment);
+                logger.info("getAppointmentByDoctorId method => CORRECT");
             }
-        } catch (SQLException ex) {
-            throw new RuntimeException(ex);
+        } catch (SQLException e) {
+            logger.error("getAppointmentByDoctorId method => FALSE " + e.getMessage());
+            throw new RuntimeException(e);
         }
         return appointmentList;
 
     }
     public List<Appointment> getAppointmentByPatientAndDoctorId(Integer doctor, Integer patient) throws DAOException {
-
+        logger.info("Start getAppointmentByPatientAndDoctorId method...");
         List<Appointment> appointmentList = new ArrayList<>();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -133,15 +143,17 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
 
 
                 appointmentList.add(appointment);
-                System.out.println(appointment);
+                logger.info("getAppointmentByPatientAndDoctorId method => CORRECT");
             }
             } catch (SQLException e) {
+            logger.error("getAppointmentByPatientAndDoctorId method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return appointmentList;
     }
 
     public List<Appointment> getAllWithLimit(int start, int count) throws DAOException{
+        logger.info("Start getAllWithLimit method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -163,15 +175,18 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
                 appointment.setAppointmentData(Timestamp.valueOf(resultSet.getString("appointments_data")).toLocalDateTime());
 
                 appointmentList.add(appointment);
+                logger.info("getAllWithLimit method => CORRECT");
             }
 
         } catch (SQLException e) {
+            logger.error("getAllWithLimit method => FALSE " + e.getMessage());
             throw new DAOException("Can not get all appointments. ", e);
         }
         return appointmentList;
     }
 
     public List<Appointment> getAllWithLimitAndOrderBy(int start, int count, String sort) throws DAOException {
+        logger.info("Start getAllWithLimitAndOrderBy method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -194,14 +209,17 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
                 appointment.setAppointmentData(Timestamp.valueOf(resultSet.getString("appointments_data")).toLocalDateTime());
 
                 appointmentList.add(appointment);
+                logger.info("getAllWithLimitAndOrderBy method => CORRECT");
             }
         } catch (SQLException e) {
+            logger.error("getAllWithLimitAndOrderBy method => FALSE " + e.getMessage());
             throw new DAOException("Can not get appointments ", e);
         }
         return appointmentList;
     }
 
     public int getCountPatient() throws DAOException{
+        logger.info("Start getCountPatient method...");
         int result = 0;
 
 
@@ -212,10 +230,11 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
 
             if (resultSet.next()) {
                 result = resultSet.getInt(1);
-
+                logger.info("getCountPatient method => CORRECT");
             }
 
         } catch (SQLException e) {
+            logger.error("getCountPatient method => FALSE " + e.getMessage());
             throw new DAOException("Can not get count appointments");
         }
 
@@ -223,7 +242,7 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
     }
 
     public boolean isExist(int appointmentId) throws DAOException {
-
+        logger.info("Start isExist method...");
 
         Appointment appointment = new Appointment();
 
@@ -237,15 +256,17 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
             }
 
             if (appointment.getAppointmentId() != null) {
-                //if exist
+                logger.info("Find appointment by id " + appointmentId + " => TRUE ");
+                logger.info("isExist method => CORRECT");
                 return true;
             } else {
-                //if not exist
+                logger.info("Find appointment by id " + appointmentId + " => FALSE ");
                 return false;
             }
 
+
         } catch (SQLException e) {
-//            logger.error("Can not do isExistEmail, SQLException = " + e.getMessage());
+            logger.error("isExist method => FALSE " + e.getMessage());
             throw new DAOException(e);
         }
 

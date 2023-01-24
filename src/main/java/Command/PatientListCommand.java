@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 public class PatientListCommand implements Command {
-    static final org.apache.log4j.Logger logger = Logger.getLogger(PatientListCommand.class);
+    static final Logger logger = Logger.getLogger(PatientListByDoctor.class);
 
        //show all patient with sort and pagination for admin//
     @Override

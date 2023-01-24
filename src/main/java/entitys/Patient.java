@@ -11,6 +11,8 @@ public class Patient {
 
     private int patientPhone;
 
+    private String patientPhoneString;
+
     public Patient() {
     }
 
@@ -62,6 +64,13 @@ public class Patient {
     public void setPatientPhone(int patientPhone) {
         this.patientPhone = patientPhone;
     }
+
+    public String getPatientPhoneString() {
+
+        patientPhoneString = String.valueOf(patientPhone);
+        return patientPhoneString;
+    }
+
 
     @Override
     public String toString() {

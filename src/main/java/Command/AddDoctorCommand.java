@@ -15,9 +15,8 @@ public class AddDoctorCommand implements Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {
         logger.info("Execute ==> AddDoctorCommand...");
-
-            Doctor doctor = new Doctor();
-
+            DoctorDao doctorDao = new DoctorDao();
+        Doctor doctor = new Doctor();
 
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
@@ -25,6 +24,13 @@ public class AddDoctorCommand implements Command {
         String password = req.getParameter("password");
         int categoryID = Category.getIDByName(req.getParameter("category"));
         int roleID = Role.getIDByName(req.getParameter("role"));
+
+
+        //CHECK EXIST DOCTOR IN DB WITH SAME LOGIN//
+
+        if(doctorDao.isExistLogin(login)){
+            throw new CommandException("User with the same login is exist! Please choose another login");
+        }
 
 
         // all english and Cyrillic letters mor from 2 to 20
@@ -54,8 +60,7 @@ public class AddDoctorCommand implements Command {
             }else throw  new CommandException("The entered role is not correct");
 
 
-        DoctorDao doctorDao = new DoctorDao();
-         doctorDao.create(doctor);
+        doctorDao.create(doctor);
 
         logger.info("New doctor create => " + doctor);
 

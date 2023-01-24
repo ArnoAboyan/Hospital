@@ -6,6 +6,7 @@ import Util.AttributFinal;
 import Util.ConnectionPool;
 import entitys.Doctor;
 import entitys.Patient;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,12 +16,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PatientDao implements EntityDAO<Integer, Patient> {
-    ;
 
+    static final Logger logger = Logger.getLogger(PatientDao.class);
 
     @Override
     public boolean create(Patient patient) {
-
+        logger.info("Start create method...");
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.ADDPATIENT);) {
@@ -31,10 +32,10 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             preparedStatement.setString(4, patient.getPatientGender());
             preparedStatement.setInt(5, patient.getPatientPhone());
 
-            System.out.println(patient);
             preparedStatement.executeUpdate();
-
+            logger.info("create method => CORRECT");
         } catch (SQLException e) {
+            logger.error("create method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return true;
@@ -42,6 +43,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
     @Override
     public Patient getByID(Integer integer) {
+        logger.info("Start getByID method...");
         Patient patient = new Patient();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -57,8 +59,9 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             patient.setPatientGender(resultSet.getString("gender"));
             patient.setPatientPhone(resultSet.getInt("phone"));
 
-
+            logger.info("getByID method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getByID method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -72,6 +75,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
     }
 
     public void updatePatientbyId(Patient patient, int patientid) {
+        logger.info("Start updatePatientbyId method...");
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.UPDATE_PATIENT_BY_ID);) {
 
@@ -82,10 +86,10 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             preparedStatement.setInt(5, patient.getPatientPhone());
             preparedStatement.setInt(6, patientid);
 
-            System.out.println(patient);
             preparedStatement.executeUpdate();
-
+            logger.info("updatePatientbyId method => CORRECT");
         } catch (SQLException e) {
+            logger.error("updatePatientbyId method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -94,14 +98,16 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
     @Override
     public void delete(Integer patientid) {
-
+        logger.info("Start delete method...");
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.DELETEPATIENT);) {
             preparedStatement.setInt(1, patientid);
 
             preparedStatement.executeUpdate();
+            logger.info("delete method => CORRECT");
         } catch (SQLException e) {
+            logger.error("delete method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -109,7 +115,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
     @Override
     public List<Patient> getAll() throws DAOException {
-
+        logger.info("Start getAll method...");
         List<Patient> patientList = new ArrayList<>();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -126,16 +132,18 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientPhone(resultSet.getInt("phone"));
 
                 patientList.add(patient);
-                System.out.println(patient);
+
             }
+            logger.info("getAll method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAll method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return patientList;
     }
 
     public List<Patient> getPatientsByDoctorId(Integer integer) throws DAOException {
-
+        logger.info("Start getPatientsByDoctorId method...");
         List<Patient> patientList = new ArrayList<>();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -156,14 +164,17 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patientList.add(patient);
 
             }
-        } catch (SQLException ex) {
-            throw new RuntimeException(ex);
+            logger.info("getPatientsByDoctorId method => CORRECT");
+        } catch (SQLException e) {
+            logger.error("getPatientsByDoctorId method => FALSE " + e.getMessage());
+            throw new RuntimeException(e);
         }
         return patientList;
 
     }
 
     public List<Patient> getAllWithLimit(int start, int count) throws DAOException {
+        logger.info("Start getAllWithLimit method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -188,14 +199,16 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
                 patientList.add(patient);
             }
-
+            logger.info("getAllWithLimit method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimit method => FALSE " + e.getMessage());
             throw new DAOException("Can not get all Room. ", e);
         }
         return patientList;
     }
 
     public int getCountPatient() throws DAOException {
+        logger.info("Start getCountPatient method...");
         int result = 0;
 
 
@@ -207,8 +220,9 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 result = resultSet.getInt(1);
 
             }
-
+            logger.info("getCountPatient method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getCountPatient method => FALSE " + e.getMessage());
             throw new DAOException("Can not get count Patient");
         }
 
@@ -216,6 +230,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
     }
 
     public List<Patient> getAllWithLimitAndOrderBy(int start, int count, String sort) throws DAOException {
+        logger.info("Start getAllWithLimitAndOrderBy method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -241,13 +256,16 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
                 patientList.add(patient);
             }
+            logger.info("getAllWithLimitAndOrderBy method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimitAndOrderBy method => FALSE " + e.getMessage());
             throw new DAOException("Can not get room. ", e);
         }
         return patientList;
     }
 
     public List<Patient> getAllWithLimitById(int start, int count, int doctorid) throws DAOException {
+        logger.info("Start getAllWithLimitById method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -274,14 +292,16 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
                 patientList.add(patient);
             }
-
+            logger.info("getAllWithLimitById method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimitById method => FALSE " + e.getMessage());
             throw new DAOException("Can not get all Room. ", e);
         }
         return patientList;
     }
 
     public int getCountPatientById(int doctorid) throws DAOException {
+        logger.info("Start getCountPatientById method...");
         int result = 0;
 
 
@@ -292,10 +312,10 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
             if (resultSet.next()) {
                 result = resultSet.getInt(1);
-                System.out.println("result" + " " + result);
             }
-
+            logger.info("getCountPatientById method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getCountPatientById method => FALSE " + e.getMessage());
             throw new DAOException("Can not get count Patient");
         }
 
@@ -303,6 +323,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
     }
 
     public List<Patient> getAllWithLimitAndOrderById(int start, int count, String sort, int doctorid) throws DAOException {
+        logger.info("Start getAllWithLimitAndOrderById method...");
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -330,13 +351,51 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
                 patientList.add(patient);
             }
+            logger.info("getAllWithLimitAndOrderById method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimitAndOrderById method => FALSE " + e.getMessage());
             throw new DAOException("Can not get room. ", e);
         }
         return patientList;
     }
 
+    //method check login is exist
+    public boolean isExistPhoneNumber(String phone) throws DAOException {
+        logger.info("Start isExistPhoneNumber method...");
+
+
+        Patient patient = new Patient();
+
+        try (Connection connection = ConnectionPool.getDataSource().getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.CHECK_PATIENT_AVAILABILITY_BY_PHONE);) {
+            preparedStatement.setString(1, phone);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                patient.setPatientPhone(resultSet.getInt("phone"));
+            }
+
+
+            if (patient.getPatientPhoneString() != null) {
+                //if exist
+                logger.info("Find patient by phone " + phone + " => TRUE ");
+                logger.info("isExistPhoneNumber method => CORRECT");
+                return true;
+            } else {
+                //if not exist
+                logger.info("Find patient by login " + phone + " => FALSE ");
+                return false;
+            }
+
+        } catch (SQLException e) {
+            logger.error("isExistPhoneNumber method => FALSE " + e.getMessage());
+            throw new DAOException(e);
+        }
+
+    }
+
     public boolean isExistById(int patientid) throws DAOException {
+        logger.info("Start isExistById method...");
         Patient patient = new Patient();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -350,13 +409,17 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
             if (patient.getPatientId() > 0) {
                 //if exist
+                logger.info("Find patient by patientid " + patientid + " => TRUE ");
+                logger.info("isExistById method => CORRECT");
                 return true;
             } else {
                 //if not exist
+                logger.info("Find patient by patientid " + patientid + " => FALSE ");
                 return false;
             }
 
         } catch (SQLException e) {
+            logger.error("isExistById method => FALSE " + e.getMessage());
 //            logger.error("Can not do isExistEmail, SQLException = " + e.getMessage());
             throw new DAOException(e);
         }

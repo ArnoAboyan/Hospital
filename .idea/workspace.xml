@@ -9,18 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v1.2 logging">
+    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v1.3 Command logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AddAppointmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AddAppointmentCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/AddDoctorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AddDoctorCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/DeleteDoctorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/DeleteDoctorCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/DeletePatientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/DeletePatientCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/HospitalCardById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/HospitalCardById.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/HospitalCardList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/HospitalCardList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AddPatientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AddPatientCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/FIX add" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/FIX add" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/LoginCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/PatientListByDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/PatientListByDoctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/PatientListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/PatientListCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/UpdateDoctorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/UpdateDoctorCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/UpdatePatientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/UpdatePatientCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Contriller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Contriller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/AppointmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/AppointmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/DoctorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/DoctorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/HospitalCardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/HospitalCardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/AttributFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/AttributFinal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/CheckRigisterUserFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/CheckRigisterUserFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/RoleManagerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/RoleManagerFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674488603762</updated>
-      <workItem from="1674488605001" duration="9791000" />
+      <workItem from="1674488605001" duration="16352000" />
     </task>
     <task id="LOCAL-00001" summary="v1 created">
       <created>1674489012404</created>
@@ -191,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674494304459</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="v1.3 Command logging">
+      <created>1674572579058</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674572579058</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +226,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1 created" />
     <MESSAGE value="v1.2 logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.2 logging" />
+    <MESSAGE value="v1.3 Command logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.3 Command logging" />
   </component>
 </project>

@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 public class UpdateDoctorCommand implements Command {
 
-    static final org.apache.log4j.Logger logger = Logger.getLogger(UpdateDoctorCommand.class);
+    static final Logger logger = Logger.getLogger(PatientListByDoctor.class);
 
     //update doctor and nurse information//
     @Override

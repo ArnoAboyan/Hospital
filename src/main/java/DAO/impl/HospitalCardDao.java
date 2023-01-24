@@ -7,6 +7,7 @@ import Util.ConnectionPool;
 import entitys.Doctor;
 import entitys.HospitalCard;
 import entitys.Patient;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,10 +18,10 @@ import java.util.List;
 
 public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
-
+    static final Logger logger = Logger.getLogger(HospitalCardDao.class);
     @Override
     public boolean create(HospitalCard hospitalCard) throws DAOException {
-
+        logger.info("Start create method...");
 
             if (!checkAvailable(hospitalCard.getPatientId(), hospitalCard.getDoctorId())) {
 
@@ -36,8 +37,10 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
                     System.out.println(preparedStatement);
                     preparedStatement.executeUpdate();
+                    logger.info("create method => CORRECT");
 
                 } catch (SQLException e) {
+                    logger.error("create method => FALSE " + e.getMessage());
                     throw new RuntimeException(e);
                 }
             }   update(hospitalCard);
@@ -47,6 +50,8 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
     @Override
     public HospitalCard getByID(Integer integer) {
+        logger.info("Start getByID method...");
+
         HospitalCard hospitalCard = new HospitalCard();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -62,8 +67,11 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
             hospitalCard.setProcedures(resultSet.getString("procedures"));
             hospitalCard.setMedications(resultSet.getString("medications"));
             hospitalCard.setOperations(resultSet.getString("operations"));
+            logger.info("getByID method => CORRECT");
 
         } catch (SQLException e) {
+            logger.error("getByID method => FALSE " + e.getMessage());
+
             throw new RuntimeException(e);
         }
 
@@ -72,6 +80,8 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
     @Override
     public boolean update(HospitalCard hospitalCard) {
+        logger.info("Start update method...");
+
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.UPDATE_HOSPITAL_CARD);) {
 
@@ -84,8 +94,10 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
+            logger.info("update method => CORRECT");
 
         } catch (SQLException e) {
+            logger.error("update method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return true;
@@ -102,7 +114,9 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
     }
 
     public HospitalCard getByPatientID(Integer integer) throws DAOException {
-                HospitalCard hospitalCard = new HospitalCard();
+        logger.info("Start getByPatientID method...");
+
+        HospitalCard hospitalCard = new HospitalCard();
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.GET_HOSPITALCARD_BY_PATIENT_ID)) {
@@ -119,8 +133,9 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
                 hospitalCard.setOperations(resultSet.getString("operations"));
             }
 
-            System.out.println(hospitalCard);
+            logger.info("getByPatientID method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getByPatientID method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
 
@@ -129,6 +144,7 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
 
     public Boolean checkAvailable(Integer patient, Integer doctor) throws DAOException {
+        logger.info("Start checkAvailable method...");
 
         boolean check = false;
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -140,13 +156,17 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
             if(resultSet.next()){
                 check = true;
             }
+            logger.info("checkAvailable method => CORRECT");
         } catch (SQLException e) {
+            logger.error("checkAvailable method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
         return check;
     }
 
     public List<HospitalCard> getAllWithLimit(int start, int count) throws DAOException {
+        logger.info("Start getAllWithLimit method...");
+
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -172,8 +192,9 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
                 hospitalCardlist.add(hospitalCard);
             }
-
+            logger.info("getAllWithLimit method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimit method => FALSE " + e.getMessage());
             throw new DAOException("Can not get all Hospital. ", e);
         }
         return hospitalCardlist;
@@ -181,6 +202,8 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
 
     public List<HospitalCard> getAllWithLimitAndOrderBy(int start, int count, String sort) throws DAOException {
+        logger.info("Start getAllWithLimitAndOrderBy method...");
+
         start = start - 1;
         if (start != 0) {
             start = start * count;
@@ -207,13 +230,17 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
 
                 hospitalCardlist.add(hospitalCard);
             }
+            logger.info("getAllWithLimitAndOrderBy method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getAllWithLimitAndOrderBy method => FALSE " + e.getMessage());
             throw new DAOException("Can not get Hospital. ", e);
         }
         return hospitalCardlist;
     }
 
     public int getCountHospitalCard() throws DAOException {
+        logger.info("Start getCountHospitalCard method...");
+
         int result = 0;
 
 
@@ -226,8 +253,9 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
                 result = resultSet.getInt(1);
 
             }
-
+            logger.info("getCountHospitalCard method => CORRECT");
         } catch (SQLException e) {
+            logger.error("getCountHospitalCard method => FALSE " + e.getMessage());
             throw new DAOException("Can not get count Hospital");
         }
 

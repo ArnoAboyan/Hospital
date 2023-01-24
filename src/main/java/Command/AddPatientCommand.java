@@ -21,6 +21,7 @@ public class AddPatientCommand implements Command{
 
         logger.info("Execute ==> AddPatientCommand...");
 
+        PatientDao patientDao = new PatientDao();
         Patient patient = new Patient();
 
 
@@ -29,6 +30,11 @@ public class AddPatientCommand implements Command{
         String phone = req.getParameter("phone");
         Date birthday = Date.valueOf(req.getParameter("birthday"));
         String gender = req.getParameter("gender");
+
+        if (patientDao.isExistPhoneNumber(phone)){
+            throw new CommandException("Patient with this phone number is exist! Please choose another " );
+        }
+
 
         // all english and Cyrillic letters mor from 2 to 20
         if (name.matches("[-a-zA-Zа-яА-ЯЁёЇїІіҐґ]{2,20}")) {
@@ -53,7 +59,7 @@ public class AddPatientCommand implements Command{
 
 
 
-        PatientDao patientDao = new PatientDao();
+
         patientDao.create(patient);
 
 
