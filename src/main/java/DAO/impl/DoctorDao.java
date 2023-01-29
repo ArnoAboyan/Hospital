@@ -17,7 +17,6 @@ import java.util.List;
 public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
 
-
     static final Logger logger = Logger.getLogger(DoctorDao.class);
 
     @Override
@@ -48,7 +47,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
         logger.info("Start getByID method...");
         Doctor doctor = new Doctor();
 
-        try (Connection connection = ConnectionPool.getDataSource().getConnection();
+        try (Connection connection =  ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.GET_DOCTOR_BY_ID)) {
             preparedStatement.setInt(1, integer);
             ResultSet resultSet = preparedStatement.executeQuery();

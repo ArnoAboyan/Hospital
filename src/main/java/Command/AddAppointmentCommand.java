@@ -33,6 +33,7 @@ public class AddAppointmentCommand implements Command {
         int doctorID = Integer.parseInt(req.getParameter("doctor"));
         int patientId = Integer.parseInt(req.getParameter("patientid"));
         String appointmentdate = (req.getParameter("appointmentdata"));
+        System.out.println(appointmentdate);
 
         if (appointmentdate == null) {
             logger.error("Problem with searching  appointmentdate " + appointmentdate);

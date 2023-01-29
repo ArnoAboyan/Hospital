@@ -8,6 +8,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Appointment {
 
@@ -32,7 +33,7 @@ public class Appointment {
         this.appointmentId = appointmentId;
     }
 
-    public Integer getDoctorId() {
+    public int getDoctorId() {
         return doctorId;
     }
 
@@ -100,6 +101,40 @@ public class Appointment {
         return appointmentDoctorSurname =  patient.getPatientSurname();
     }
 
+
+    public void setAppointmentDoctorName(String appointmentDoctorName) {
+        this.appointmentDoctorName = appointmentDoctorName;
+    }
+
+    public void setAppointmentDoctorSurname(String appointmentDoctorSurname) {
+        this.appointmentDoctorSurname = appointmentDoctorSurname;
+    }
+
+    public void setAppointmentDoctorCategory(Category appointmentDoctorCategory) {
+        this.appointmentDoctorCategory = appointmentDoctorCategory;
+    }
+
+    public void setAppointmentPatientName(String appointmentPatientName) {
+        this.appointmentPatientName = appointmentPatientName;
+    }
+
+    public void setAppointmentPatientSurname(String appointmentPatientSurname) {
+        this.appointmentPatientSurname = appointmentPatientSurname;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Appointment that = (Appointment) o;
+        return Objects.equals(appointmentId, that.appointmentId) && Objects.equals(doctorId, that.doctorId) && Objects.equals(patientId, that.patientId) && Objects.equals(appointmentData, that.appointmentData) && Objects.equals(appointmentDoctorName, that.appointmentDoctorName) && Objects.equals(appointmentDoctorSurname, that.appointmentDoctorSurname) && appointmentDoctorCategory == that.appointmentDoctorCategory && Objects.equals(appointmentPatientName, that.appointmentPatientName) && Objects.equals(appointmentPatientSurname, that.appointmentPatientSurname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(appointmentId, doctorId, patientId, appointmentData, appointmentDoctorName, appointmentDoctorSurname, appointmentDoctorCategory, appointmentPatientName, appointmentPatientSurname);
+    }
+
     @Override
     public String toString() {
         return "Appointment{" +
@@ -107,6 +142,11 @@ public class Appointment {
                 ", doctorId=" + doctorId +
                 ", patientId=" + patientId +
                 ", appointmentData=" + appointmentData +
+                ", appointmentDoctorName='" + appointmentDoctorName + '\'' +
+                ", appointmentDoctorSurname='" + appointmentDoctorSurname + '\'' +
+                ", appointmentDoctorCategory=" + appointmentDoctorCategory +
+                ", appointmentPatientName='" + appointmentPatientName + '\'' +
+                ", appointmentPatientSurname='" + appointmentPatientSurname + '\'' +
                 '}';
     }
 }

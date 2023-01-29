@@ -53,6 +53,7 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
         logger.info("Start delete method...");
 
 
+
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.DELETEAPPOINTMENT);) {
             preparedStatement.setInt(1, appointmentid);
@@ -271,5 +272,8 @@ public class AppointmentDao implements EntityDAO<Integer ,Appointment> {
         }
 
     }
+
+
+
 
 }

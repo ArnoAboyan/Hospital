@@ -21,7 +21,7 @@ public class ConnectionPool {
 
     private static HikariDataSource dataSource;
 
-    static {
+    static  {
         try {
 
             dataSource = new HikariDataSource();

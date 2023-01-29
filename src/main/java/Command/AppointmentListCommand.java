@@ -17,23 +17,24 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppointmentListCommand implements Command{
+public class AppointmentListCommand implements Command {
 
     static final Logger logger = Logger.getLogger(AppointmentListCommand.class);
+
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException, SQLException {
-        logger.info("Execute ==> AdminPageCommand...");
+        logger.info("Execute ==> AppointmentListCommand...");
 
-   //check role
+        //check role
         Doctor user = (Doctor) req.getSession().getAttribute("currentUser");
 
-        if(user==null){
+        if (user == null) {
             return "login.jsp";
         }
 
         String role = user.getRole().getTitle();
 
-        if(!role.equalsIgnoreCase("admin")) {
+        if (!role.equalsIgnoreCase("admin")) {
             logger.error("Check role " + role + " FALSE");
             return "error.jsp";
         }
@@ -41,7 +42,7 @@ public class AppointmentListCommand implements Command{
         logger.info("Check role " + role + " CORRECT");
 
         String sort = req.getParameter("sort");
-        logger.info("get " + sort);
+        logger.info("get sort" + sort);
         AppointmentDao appointmentDao = new AppointmentDao();
         if (sort == null) {
             logger.info("execute without sort");
@@ -52,22 +53,19 @@ public class AppointmentListCommand implements Command{
         }
     }
 
-//execute without sort//
+    //execute without sort//
     public String executeWithOutSort(HttpServletRequest req, AppointmentDao appointmentDao) throws DAOException, CommandException, SQLException {
 
 
         String page = req.getParameter("page");
-          logger.info("get " + page);
+        logger.info("get page" + page);
         int i = Integer.parseInt(page);
         List<Appointment> appointmentList = appointmentDao.getAllWithLimit(i, 5);
-        System.out.println(appointmentList);
-
-
-        int countPage = (int) Math.ceil((double)appointmentDao.getCountPatient()/5);
-        System.out.println(countPage);
-            logger.info("countPage =  " + countPage);
+        logger.info("appointmentList " + appointmentList);
+        int countPage = (int) Math.ceil((double) appointmentDao.getCountPatient() / 5);
+        logger.info("countPage =  " + countPage);
         if (appointmentList == null) {
-                logger.error("appointmentList = null");
+            logger.error("appointmentList = null");
             throw new CommandException("Can`t get patients");
         } else {
             req.getSession().setAttribute("appointment", appointmentList);
@@ -79,15 +77,13 @@ public class AppointmentListCommand implements Command{
     }
 
 
-    private String executeWithSort(HttpServletRequest req, AppointmentDao appointmentDao, String sort) throws DAOException, CommandException {
+    public String executeWithSort(HttpServletRequest req, AppointmentDao appointmentDao, String sort) throws DAOException, CommandException {
 
         String page = req.getParameter("page");
-        logger.info("get " + page);
+        logger.info("get page" + page);
         int i = Integer.parseInt(page);
         List<Appointment> appointmentList = appointmentDao.getAllWithLimitAndOrderBy(i, 5, sort);
-        System.out.println(appointmentList);
-        int countPage = (int) Math.ceil((double)appointmentDao.getCountPatient()/5);
-        System.out.println(countPage);
+        int countPage = (int) Math.ceil((double) appointmentDao.getCountPatient() / 5);
         logger.info("countPage =  " + countPage);
         if (appointmentList == null) {
             logger.error("appointmentList = null");
@@ -101,7 +97,6 @@ public class AppointmentListCommand implements Command{
             return "appointmentlist.jsp";
         }
     }
-
 
 
 }

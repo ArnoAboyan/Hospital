@@ -7,7 +7,7 @@
     <groupId>com.example</groupId>
     <artifactId>Hospital</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Hospital</name>
+    <name>java</name>
     <packaging>war</packaging>
 
     <properties>
@@ -79,6 +79,22 @@
             <artifactId>HikariCP</artifactId>
             <version>5.0.1</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>5.0.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
 
     </dependencies>
 
