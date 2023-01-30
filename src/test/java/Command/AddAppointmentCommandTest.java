@@ -2,23 +2,40 @@ package Command;
 
 import DAO.DAOException;
 import DAO.impl.AppointmentDao;
+import Util.AttributFinal;
+import Util.ConnectionPool;
 import entitys.Appointment;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedStatic;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class AddAppointmentCommandTest {
     AppointmentDao appointmentDaoMock = mock(AppointmentDao.class);
 
+//    mock connection to DB//
+
+    MockedStatic<ConnectionPool> dsStatic = mockStatic(ConnectionPool.class);
+    static DataSource dataSourceMock;
+    Connection con;
+    PreparedStatement psOne;
+    ResultSet rsOne;
+    PreparedStatement psTwo;
+    ResultSet rsTwo;
 
     Appointment appointment;
     int doctorid;
@@ -27,6 +44,21 @@ class AddAppointmentCommandTest {
 
     @BeforeEach
     void setUp() {
+
+        //CONFIG MOCK CONNECTION TO DB//
+
+        con = mock(Connection.class);
+        dataSourceMock = mock(DataSource.class);
+
+
+        // PREPARED STATMENT //
+        psOne = mock(PreparedStatement.class);
+        rsOne = mock(ResultSet.class);
+        psTwo = mock(PreparedStatement.class);
+        rsTwo = mock(ResultSet.class);
+
+
+
         datetimeMock = "2023-01-31T18:03";
 
         String datetime = "2023-11-09 10:30";
@@ -43,7 +75,7 @@ class AddAppointmentCommandTest {
     }
 
     @Test
-   public void executeTest() throws DAOException, CommandException {
+   public void executeTest() throws DAOException, CommandException, SQLException {
         HttpSession session = mock(HttpSession.class);
         HttpServletRequest req = mock(HttpServletRequest.class);
         HttpServletResponse resp = mock(HttpServletResponse.class);
@@ -56,7 +88,11 @@ class AddAppointmentCommandTest {
 
 
 
-        when(appointmentDaoMock.create(appointment)).thenReturn(true);
+        dsStatic.when(() -> ConnectionPool.getDataSource().getConnection()).thenReturn(dataSourceMock);
+        when(dataSourceMock.getConnection()).thenReturn(con);
+        when(con.prepareStatement(AttributFinal.ADDDAPPOINTMENT)).thenReturn(psOne);
+        when(psOne.executeQuery()).thenReturn(rsOne);
+        when(rsTwo.next()).thenReturn(true).thenReturn(false);
 
         AddAppointmentCommand addAppointmentCommand = new AddAppointmentCommand();
 
@@ -64,5 +100,8 @@ class AddAppointmentCommandTest {
         String expected = "controller?command=patientlistcommand&page=1";
         assertEquals(actual, expected);
     }
-
+    @AfterEach
+    public void tearDown() {
+        dsStatic.close();
+    }
 }

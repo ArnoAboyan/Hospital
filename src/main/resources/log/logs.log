@@ -1,0 +1,1021 @@
+2023-01-29 14:14:32 INFO  [main]: get 1
+2023-01-29 14:14:32 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 14:14:32 INFO  [main]: countPage =  0
+2023-01-29 14:14:32 INFO  [main]: req.setAttributes => Correct
+2023-01-29 14:14:32 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 14:14:32 INFO  [main]: Check role admin CORRECT
+2023-01-29 14:14:32 INFO  [main]: get null
+2023-01-29 14:14:32 INFO  [main]: execute without sort
+2023-01-29 14:14:32 INFO  [main]: get 1
+2023-01-29 14:14:32 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 14:14:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:14:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:14:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:14:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:14:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:14:33 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 14:14:33 INFO  [main]: Start getCountPatient method...
+2023-01-29 14:14:33 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 14:14:33 INFO  [main]: countPage =  2
+2023-01-29 14:14:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 14:15:46 INFO  [main]: get page1
+2023-01-29 14:15:46 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 14:15:46 INFO  [main]: countPage =  0
+2023-01-29 14:15:46 INFO  [main]: req.setAttributes => Correct
+2023-01-29 14:15:46 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 14:15:46 INFO  [main]: Check role admin CORRECT
+2023-01-29 14:15:46 INFO  [main]: get sortnull
+2023-01-29 14:15:46 INFO  [main]: execute without sort
+2023-01-29 14:15:46 INFO  [main]: get page1
+2023-01-29 14:15:46 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 14:15:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:15:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:15:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:15:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:15:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 14:15:47 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 14:15:47 INFO  [main]: Start getCountPatient method...
+2023-01-29 14:15:47 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 14:15:47 INFO  [main]: countPage =  2
+2023-01-29 14:15:47 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:15:33 INFO  [main]: get page1
+2023-01-29 15:15:33 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:15:33 INFO  [main]: countPage =  0
+2023-01-29 15:15:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:15:33 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:15:33 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:15:33 INFO  [main]: get sortnull
+2023-01-29 15:15:33 INFO  [main]: execute without sort
+2023-01-29 15:15:33 INFO  [main]: get page1
+2023-01-29 15:15:33 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:15:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:15:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:15:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:15:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:15:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:15:33 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:15:33 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:15:33 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:15:33 INFO  [main]: countPage =  2
+2023-01-29 15:15:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:18:14 INFO  [main]: get page1
+2023-01-29 15:18:14 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:18:14 INFO  [main]: countPage =  0
+2023-01-29 15:18:14 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:18:14 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:18:14 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:18:14 INFO  [main]: get sortnull
+2023-01-29 15:18:14 INFO  [main]: execute without sort
+2023-01-29 15:18:14 INFO  [main]: get page1
+2023-01-29 15:18:14 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:18:15 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:18:15 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:18:15 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:18:15 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:18:15 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:18:15 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:18:15 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:18:15 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:18:15 INFO  [main]: countPage =  2
+2023-01-29 15:18:15 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:21:49 INFO  [main]: get page1
+2023-01-29 15:21:49 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:21:49 INFO  [main]: countPage =  0
+2023-01-29 15:21:49 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:21:49 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:21:49 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:21:49 INFO  [main]: get sortnull
+2023-01-29 15:21:49 INFO  [main]: execute without sort
+2023-01-29 15:21:49 INFO  [main]: get page1
+2023-01-29 15:21:49 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:21:50 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:21:50 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:21:50 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:21:50 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:21:50 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:21:50 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:21:50 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:21:50 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:21:50 INFO  [main]: countPage =  2
+2023-01-29 15:21:50 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:24:40 INFO  [main]: get page1
+2023-01-29 15:24:40 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:24:40 INFO  [main]: countPage =  0
+2023-01-29 15:24:40 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:24:40 INFO  [main]: get page1
+2023-01-29 15:24:40 INFO  [main]: countPage =  0
+2023-01-29 15:24:40 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:24:40 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:24:40 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:24:40 INFO  [main]: get sortnull
+2023-01-29 15:24:40 INFO  [main]: execute without sort
+2023-01-29 15:24:40 INFO  [main]: get page1
+2023-01-29 15:24:40 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:24:41 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:24:41 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:24:41 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:24:41 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:24:41 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:24:41 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:24:41 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:24:41 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:24:41 INFO  [main]: countPage =  2
+2023-01-29 15:24:41 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:26:21 INFO  [main]: get page1
+2023-01-29 15:26:21 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:26:21 INFO  [main]: countPage =  0
+2023-01-29 15:26:21 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:26:21 INFO  [main]: get page1
+2023-01-29 15:26:21 INFO  [main]: countPage =  0
+2023-01-29 15:26:21 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:26:21 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:26:21 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:26:21 INFO  [main]: get sortasdasd
+2023-01-29 15:26:21 INFO  [main]: execute with sort
+2023-01-29 15:26:21 INFO  [main]: get page1
+2023-01-29 15:26:21 INFO  [main]: Start getAllWithLimitAndOrderBy method...
+2023-01-29 15:26:22 ERROR [main]: getAllWithLimitAndOrderBy method => FALSE Unknown column 'asdasd' in 'order clause'
+2023-01-29 15:27:33 INFO  [main]: get page1
+2023-01-29 15:27:33 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:27:33 INFO  [main]: countPage =  0
+2023-01-29 15:27:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:27:33 INFO  [main]: get page1
+2023-01-29 15:27:33 INFO  [main]: countPage =  0
+2023-01-29 15:27:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:27:33 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:27:33 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:27:33 INFO  [main]: get sortnull
+2023-01-29 15:27:33 INFO  [main]: execute without sort
+2023-01-29 15:27:33 INFO  [main]: get page1
+2023-01-29 15:27:33 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:27:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:27:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:27:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:27:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:27:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:27:34 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:27:34 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:27:34 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:27:34 INFO  [main]: countPage =  2
+2023-01-29 15:27:34 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:30:03 INFO  [main]: get page1
+2023-01-29 15:30:03 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:30:03 INFO  [main]: countPage =  0
+2023-01-29 15:30:03 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:30:03 INFO  [main]: get page1
+2023-01-29 15:30:03 INFO  [main]: countPage =  0
+2023-01-29 15:30:03 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:30:03 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:30:03 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:30:03 INFO  [main]: get sortnull
+2023-01-29 15:30:03 INFO  [main]: execute without sort
+2023-01-29 15:30:03 INFO  [main]: get page1
+2023-01-29 15:30:03 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:30:04 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:30:04 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:30:04 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:30:04 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:30:04 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:30:04 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:30:04 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:30:04 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:30:04 INFO  [main]: countPage =  2
+2023-01-29 15:30:04 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:53:33 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 15:53:33 ERROR [main]: Problem with searching  appointmentdate null
+2023-01-29 15:53:33 INFO  [main]: get page1
+2023-01-29 15:53:33 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:53:33 INFO  [main]: countPage =  0
+2023-01-29 15:53:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:53:33 INFO  [main]: get page1
+2023-01-29 15:53:33 INFO  [main]: countPage =  0
+2023-01-29 15:53:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:53:33 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:53:33 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:53:33 INFO  [main]: get sortnull
+2023-01-29 15:53:33 INFO  [main]: execute without sort
+2023-01-29 15:53:33 INFO  [main]: get page1
+2023-01-29 15:53:33 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:53:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:53:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:53:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:53:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:53:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:53:34 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:53:34 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:53:34 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:53:34 INFO  [main]: countPage =  2
+2023-01-29 15:53:34 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:55:41 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 15:55:41 INFO  [main]: get page1
+2023-01-29 15:55:41 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:55:41 INFO  [main]: countPage =  0
+2023-01-29 15:55:41 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:55:41 INFO  [main]: get page1
+2023-01-29 15:55:41 INFO  [main]: countPage =  0
+2023-01-29 15:55:41 INFO  [main]: req.setAttributes => Correct
+2023-01-29 15:55:41 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 15:55:41 INFO  [main]: Check role admin CORRECT
+2023-01-29 15:55:41 INFO  [main]: get sortnull
+2023-01-29 15:55:41 INFO  [main]: execute without sort
+2023-01-29 15:55:41 INFO  [main]: get page1
+2023-01-29 15:55:41 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 15:55:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:55:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:55:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:55:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:55:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 15:55:42 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 15:55:42 INFO  [main]: Start getCountPatient method...
+2023-01-29 15:55:42 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 15:55:42 INFO  [main]: countPage =  2
+2023-01-29 15:55:42 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:01:19 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:01:19 INFO  [main]: Start create method...
+2023-01-29 16:01:20 ERROR [main]: create method => FALSE Cannot add or update a child row: a foreign key constraint fails (`hospitaldb`.`appointments`, CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2023-01-29 16:01:21 INFO  [main]: get page1
+2023-01-29 16:01:21 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:01:21 INFO  [main]: countPage =  0
+2023-01-29 16:01:21 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:01:21 INFO  [main]: get page1
+2023-01-29 16:01:21 INFO  [main]: countPage =  0
+2023-01-29 16:01:21 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:01:21 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:01:21 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:01:21 INFO  [main]: get sortnull
+2023-01-29 16:01:21 INFO  [main]: execute without sort
+2023-01-29 16:01:21 INFO  [main]: get page1
+2023-01-29 16:01:21 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:01:21 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:01:21 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:01:21 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:01:21 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:01:21 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:01:21 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:01:21 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:01:21 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:01:21 INFO  [main]: countPage =  2
+2023-01-29 16:01:21 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:07:48 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:07:48 INFO  [main]: Start create method...
+2023-01-29 16:07:49 ERROR [main]: create method => FALSE Cannot add or update a child row: a foreign key constraint fails (`hospitaldb`.`appointments`, CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2023-01-29 16:07:49 INFO  [main]: get page1
+2023-01-29 16:07:49 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:07:49 INFO  [main]: countPage =  0
+2023-01-29 16:07:49 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:07:49 INFO  [main]: get page1
+2023-01-29 16:07:49 INFO  [main]: countPage =  0
+2023-01-29 16:07:49 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:07:49 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:07:49 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:07:49 INFO  [main]: get sortnull
+2023-01-29 16:07:49 INFO  [main]: execute without sort
+2023-01-29 16:07:49 INFO  [main]: get page1
+2023-01-29 16:07:49 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:07:49 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:07:49 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:07:49 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:07:49 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:07:49 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:07:49 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:07:49 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:07:49 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:07:49 INFO  [main]: countPage =  2
+2023-01-29 16:07:49 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:31:30 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:31:30 INFO  [main]: Start create method...
+2023-01-29 16:31:31 ERROR [main]: create method => FALSE Cannot add or update a child row: a foreign key constraint fails (`hospitaldb`.`appointments`, CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2023-01-29 16:31:32 INFO  [main]: get page1
+2023-01-29 16:31:32 INFO  [main]: appointmentList [Appointment{appointmentId=1, doctorId=1, patientId=1, appointmentData=2023-11-09T10:30, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:31:32 INFO  [main]: countPage =  1
+2023-01-29 16:31:32 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:31:32 INFO  [main]: get page1
+2023-01-29 16:31:32 INFO  [main]: countPage =  0
+2023-01-29 16:31:32 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:31:32 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:31:32 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:31:32 INFO  [main]: get sortnull
+2023-01-29 16:31:32 INFO  [main]: execute without sort
+2023-01-29 16:31:32 INFO  [main]: get page1
+2023-01-29 16:31:32 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:31:32 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:31:32 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:31:32 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:31:32 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:31:32 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:31:32 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:31:32 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:31:32 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:31:32 INFO  [main]: countPage =  2
+2023-01-29 16:31:32 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:32:32 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:32:32 INFO  [main]: Start create method...
+2023-01-29 16:32:33 ERROR [main]: create method => FALSE Cannot add or update a child row: a foreign key constraint fails (`hospitaldb`.`appointments`, CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2023-01-29 16:32:33 INFO  [main]: get page1
+2023-01-29 16:32:33 INFO  [main]: appointmentList []
+2023-01-29 16:32:33 INFO  [main]: countPage =  0
+2023-01-29 16:32:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:32:33 INFO  [main]: get page1
+2023-01-29 16:32:33 INFO  [main]: countPage =  0
+2023-01-29 16:32:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:32:33 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:32:33 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:32:33 INFO  [main]: get sortnull
+2023-01-29 16:32:33 INFO  [main]: execute without sort
+2023-01-29 16:32:33 INFO  [main]: get page1
+2023-01-29 16:32:33 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:32:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:32:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:32:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:32:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:32:33 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:32:33 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:32:33 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:32:33 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:32:33 INFO  [main]: countPage =  2
+2023-01-29 16:32:33 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:35:56 INFO  [main]: get page1
+2023-01-29 16:35:56 INFO  [main]: appointmentList []
+2023-01-29 16:35:56 INFO  [main]: countPage =  0
+2023-01-29 16:35:56 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:35:56 INFO  [main]: get page1
+2023-01-29 16:35:56 INFO  [main]: countPage =  0
+2023-01-29 16:35:56 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:35:56 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:35:56 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:35:56 INFO  [main]: get sortnull
+2023-01-29 16:35:56 INFO  [main]: execute without sort
+2023-01-29 16:35:56 INFO  [main]: get page1
+2023-01-29 16:35:56 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:35:57 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:35:57 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:35:57 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:35:57 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:35:57 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:35:57 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:35:57 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:35:57 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:35:57 INFO  [main]: countPage =  2
+2023-01-29 16:35:57 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:36:46 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:36:47 INFO  [main]: get page1
+2023-01-29 16:36:47 INFO  [main]: appointmentList []
+2023-01-29 16:36:47 INFO  [main]: countPage =  0
+2023-01-29 16:36:47 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:36:47 INFO  [main]: get page1
+2023-01-29 16:36:47 INFO  [main]: countPage =  0
+2023-01-29 16:36:47 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:36:47 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:36:47 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:36:47 INFO  [main]: get sortnull
+2023-01-29 16:36:47 INFO  [main]: execute without sort
+2023-01-29 16:36:47 INFO  [main]: get page1
+2023-01-29 16:36:47 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:36:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:36:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:36:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:36:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:36:47 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:36:47 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:36:47 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:36:47 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:36:47 INFO  [main]: countPage =  2
+2023-01-29 16:36:47 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:37:33 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:37:34 INFO  [main]: get page1
+2023-01-29 16:37:34 INFO  [main]: appointmentList []
+2023-01-29 16:37:34 INFO  [main]: countPage =  0
+2023-01-29 16:37:34 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:37:34 INFO  [main]: get page1
+2023-01-29 16:37:34 INFO  [main]: countPage =  0
+2023-01-29 16:37:34 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:37:34 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:37:34 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:37:34 INFO  [main]: get sortnull
+2023-01-29 16:37:34 INFO  [main]: execute without sort
+2023-01-29 16:37:34 INFO  [main]: get page1
+2023-01-29 16:37:34 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:37:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:37:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:37:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:37:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:37:34 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:37:34 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:37:34 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:37:34 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:37:34 INFO  [main]: countPage =  2
+2023-01-29 16:37:34 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:38:40 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:38:40 INFO  [main]: Start create method...
+2023-01-29 16:38:41 ERROR [main]: create method => FALSE Cannot add or update a child row: a foreign key constraint fails (`hospitaldb`.`appointments`, CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2023-01-29 16:38:42 INFO  [main]: get page1
+2023-01-29 16:38:42 INFO  [main]: appointmentList []
+2023-01-29 16:38:42 INFO  [main]: countPage =  0
+2023-01-29 16:38:42 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:38:42 INFO  [main]: get page1
+2023-01-29 16:38:42 INFO  [main]: countPage =  0
+2023-01-29 16:38:42 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:38:42 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:38:42 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:38:42 INFO  [main]: get sortnull
+2023-01-29 16:38:42 INFO  [main]: execute without sort
+2023-01-29 16:38:42 INFO  [main]: get page1
+2023-01-29 16:38:42 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:38:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:38:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:38:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:38:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:38:42 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:38:42 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:38:42 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:38:42 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:38:42 INFO  [main]: countPage =  2
+2023-01-29 16:38:42 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:41:01 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:41:01 INFO  [main]: Start create method...
+2023-01-29 16:41:53 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:41:53 INFO  [main]: Start create method...
+2023-01-29 16:42:07 ERROR [main]: create method => FALSE Cannot add or update a child row: a foreign key constraint fails (`hospitaldb`.`appointments`, CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+2023-01-29 16:42:07 INFO  [main]: get page1
+2023-01-29 16:42:07 INFO  [main]: appointmentList []
+2023-01-29 16:42:07 INFO  [main]: countPage =  0
+2023-01-29 16:42:07 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:42:07 INFO  [main]: get page1
+2023-01-29 16:42:07 INFO  [main]: countPage =  0
+2023-01-29 16:42:07 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:42:07 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:42:07 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:42:07 INFO  [main]: get sortnull
+2023-01-29 16:42:07 INFO  [main]: execute without sort
+2023-01-29 16:42:07 INFO  [main]: get page1
+2023-01-29 16:42:07 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:42:07 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:42:07 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:42:07 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:42:07 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:42:07 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:42:07 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:42:07 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:42:07 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:42:07 INFO  [main]: countPage =  2
+2023-01-29 16:42:07 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:47:35 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-29 16:47:35 INFO  [main]: Start create method...
+2023-01-29 16:47:36 INFO  [main]: create method => CORRECT
+2023-01-29 16:47:36 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-29 16:47:37 INFO  [main]: get page1
+2023-01-29 16:47:37 INFO  [main]: appointmentList []
+2023-01-29 16:47:37 INFO  [main]: countPage =  0
+2023-01-29 16:47:37 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:47:37 INFO  [main]: get page1
+2023-01-29 16:47:37 INFO  [main]: countPage =  0
+2023-01-29 16:47:37 INFO  [main]: req.setAttributes => Correct
+2023-01-29 16:47:37 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-29 16:47:37 INFO  [main]: Check role admin CORRECT
+2023-01-29 16:47:37 INFO  [main]: get sortnull
+2023-01-29 16:47:37 INFO  [main]: execute without sort
+2023-01-29 16:47:37 INFO  [main]: get page1
+2023-01-29 16:47:37 INFO  [main]: Start getAllWithLimit method...
+2023-01-29 16:47:37 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:47:37 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:47:37 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:47:37 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:47:37 INFO  [main]: getAllWithLimit method => CORRECT
+2023-01-29 16:47:37 INFO  [main]: appointmentList [Appointment{appointmentId=7, doctorId=22, patientId=9, appointmentData=2023-01-18T11:13, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=9, doctorId=21, patientId=9, appointmentData=2023-01-14T20:17, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=12, doctorId=24, patientId=29, appointmentData=2023-01-13T19:37, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=15, doctorId=25, patientId=1, appointmentData=2023-01-12T20:18, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}, Appointment{appointmentId=16, doctorId=21, patientId=1, appointmentData=2023-01-14T21:29, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}]
+2023-01-29 16:47:37 INFO  [main]: Start getCountPatient method...
+2023-01-29 16:47:37 INFO  [main]: getCountPatient method => CORRECT
+2023-01-29 16:47:37 INFO  [main]: countPage =  2
+2023-01-29 16:47:37 INFO  [main]: req.setAttributes => Correct
+2023-01-30 17:46:22 INFO  [main]: get page1
+2023-01-30 17:46:22 INFO  [main]: appointmentList []
+2023-01-30 17:46:22 INFO  [main]: countPage =  0
+2023-01-30 17:46:22 INFO  [main]: req.setAttributes => Correct
+2023-01-30 17:56:07 INFO  [main]: get page1
+2023-01-30 17:56:07 INFO  [main]: appointmentList []
+2023-01-30 17:56:07 INFO  [main]: countPage =  0
+2023-01-30 17:56:07 INFO  [main]: req.setAttributes => Correct
+2023-01-30 17:56:20 INFO  [main]: get page1
+2023-01-30 17:56:20 INFO  [main]: countPage =  0
+2023-01-30 17:56:20 INFO  [main]: req.setAttributes => Correct
+2023-01-30 17:56:29 INFO  [main]: get page1
+2023-01-30 17:56:29 INFO  [main]: countPage =  0
+2023-01-30 17:56:29 INFO  [main]: req.setAttributes => Correct
+2023-01-30 17:57:23 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 17:57:23 INFO  [main]: Start create method...
+2023-01-30 17:57:24 INFO  [main]: create method => CORRECT
+2023-01-30 17:57:24 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 17:57:24 INFO  [main]: get page1
+2023-01-30 17:57:24 INFO  [main]: appointmentList []
+2023-01-30 17:57:24 INFO  [main]: countPage =  0
+2023-01-30 17:57:24 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:04:10 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:04:10 INFO  [main]: Start create method...
+2023-01-30 18:04:10 INFO  [main]: create method => CORRECT
+2023-01-30 18:04:10 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:04:56 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:04:56 INFO  [main]: Start create method...
+2023-01-30 18:04:56 INFO  [main]: create method => CORRECT
+2023-01-30 18:04:56 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:06:04 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:06:04 INFO  [main]: Start create method...
+2023-01-30 18:06:04 INFO  [main]: create method => CORRECT
+2023-01-30 18:06:04 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:06:05 INFO  [main]: get page1
+2023-01-30 18:06:05 INFO  [main]: appointmentList []
+2023-01-30 18:06:05 INFO  [main]: countPage =  0
+2023-01-30 18:06:05 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:06:05 INFO  [main]: get page1
+2023-01-30 18:06:05 INFO  [main]: countPage =  0
+2023-01-30 18:06:05 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:06:05 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 18:06:05 INFO  [main]: Check role admin CORRECT
+2023-01-30 18:06:05 INFO  [main]: get sortnull
+2023-01-30 18:06:05 INFO  [main]: execute without sort
+2023-01-30 18:06:05 INFO  [main]: get page1
+2023-01-30 18:06:05 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 18:08:21 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:08:21 INFO  [main]: Start create method...
+2023-01-30 18:08:21 INFO  [main]: create method => CORRECT
+2023-01-30 18:08:21 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:08:22 INFO  [main]: get page1
+2023-01-30 18:08:22 INFO  [main]: appointmentList []
+2023-01-30 18:08:22 INFO  [main]: countPage =  0
+2023-01-30 18:08:22 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:08:22 INFO  [main]: get page1
+2023-01-30 18:08:22 INFO  [main]: countPage =  0
+2023-01-30 18:08:22 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:08:22 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 18:08:22 INFO  [main]: Check role admin CORRECT
+2023-01-30 18:08:22 INFO  [main]: get sortnull
+2023-01-30 18:08:22 INFO  [main]: execute without sort
+2023-01-30 18:08:22 INFO  [main]: get page1
+2023-01-30 18:08:22 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 18:13:57 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:13:57 INFO  [main]: Start create method...
+2023-01-30 18:13:57 INFO  [main]: create method => CORRECT
+2023-01-30 18:13:57 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:13:58 INFO  [main]: get page1
+2023-01-30 18:13:58 INFO  [main]: appointmentList []
+2023-01-30 18:13:58 INFO  [main]: countPage =  0
+2023-01-30 18:13:58 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:13:58 INFO  [main]: get page1
+2023-01-30 18:13:58 INFO  [main]: countPage =  0
+2023-01-30 18:13:58 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:13:58 INFO  [main]: get page1
+2023-01-30 18:13:58 INFO  [main]: appointmentList []
+2023-01-30 18:13:58 INFO  [main]: countPage =  0
+2023-01-30 18:13:58 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:21:01 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:21:01 INFO  [main]: Start create method...
+2023-01-30 18:21:01 INFO  [main]: create method => CORRECT
+2023-01-30 18:21:01 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:21:02 INFO  [main]: get page1
+2023-01-30 18:21:02 INFO  [main]: appointmentList []
+2023-01-30 18:21:02 INFO  [main]: countPage =  0
+2023-01-30 18:21:02 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:21:02 INFO  [main]: get page1
+2023-01-30 18:21:02 INFO  [main]: countPage =  0
+2023-01-30 18:21:02 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:21:02 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 18:21:02 INFO  [main]: Check role admin CORRECT
+2023-01-30 18:21:02 INFO  [main]: get sortnull
+2023-01-30 18:21:02 INFO  [main]: execute without sort
+2023-01-30 18:21:02 INFO  [main]: get page1
+2023-01-30 18:21:02 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 18:22:50 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 18:22:50 INFO  [main]: Start create method...
+2023-01-30 18:22:51 INFO  [main]: create method => CORRECT
+2023-01-30 18:22:51 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 18:22:52 INFO  [main]: get page1
+2023-01-30 18:22:52 INFO  [main]: appointmentList []
+2023-01-30 18:22:52 INFO  [main]: countPage =  0
+2023-01-30 18:22:52 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:22:52 INFO  [main]: get page1
+2023-01-30 18:22:52 INFO  [main]: countPage =  0
+2023-01-30 18:22:52 INFO  [main]: req.setAttributes => Correct
+2023-01-30 18:22:52 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 18:22:52 INFO  [main]: Check role admin CORRECT
+2023-01-30 18:22:52 INFO  [main]: get sortnull
+2023-01-30 18:22:52 INFO  [main]: execute without sort
+2023-01-30 18:22:52 INFO  [main]: get page1
+2023-01-30 18:22:52 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:15:24 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:15:24 INFO  [main]: Start create method...
+2023-01-30 19:15:24 INFO  [main]: create method => CORRECT
+2023-01-30 19:15:24 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:15:25 INFO  [main]: get page1
+2023-01-30 19:15:25 INFO  [main]: appointmentList []
+2023-01-30 19:15:25 INFO  [main]: countPage =  0
+2023-01-30 19:15:25 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:15:25 INFO  [main]: get page1
+2023-01-30 19:15:25 INFO  [main]: countPage =  0
+2023-01-30 19:15:25 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:15:25 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:15:25 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:15:25 INFO  [main]: get sortnull
+2023-01-30 19:15:25 INFO  [main]: execute without sort
+2023-01-30 19:15:25 INFO  [main]: get page1
+2023-01-30 19:15:25 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:24:04 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:24:04 INFO  [main]: Start create method...
+2023-01-30 19:24:04 INFO  [main]: create method => CORRECT
+2023-01-30 19:24:04 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:24:05 INFO  [main]: get page1
+2023-01-30 19:24:05 INFO  [main]: appointmentList []
+2023-01-30 19:24:05 INFO  [main]: countPage =  0
+2023-01-30 19:24:05 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:24:05 INFO  [main]: get page1
+2023-01-30 19:24:05 INFO  [main]: countPage =  0
+2023-01-30 19:24:05 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:24:05 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:24:05 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:24:05 INFO  [main]: get sortnull
+2023-01-30 19:24:05 INFO  [main]: execute without sort
+2023-01-30 19:24:05 INFO  [main]: get page1
+2023-01-30 19:24:05 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:24:18 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:24:18 INFO  [main]: Start create method...
+2023-01-30 19:24:19 INFO  [main]: create method => CORRECT
+2023-01-30 19:24:19 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:24:20 INFO  [main]: get page1
+2023-01-30 19:24:20 INFO  [main]: appointmentList []
+2023-01-30 19:24:20 INFO  [main]: countPage =  0
+2023-01-30 19:24:20 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:24:20 INFO  [main]: get page1
+2023-01-30 19:24:20 INFO  [main]: countPage =  0
+2023-01-30 19:24:20 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:24:20 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:24:20 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:24:20 INFO  [main]: get sortnull
+2023-01-30 19:24:20 INFO  [main]: execute without sort
+2023-01-30 19:24:20 INFO  [main]: get page1
+2023-01-30 19:24:20 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:24:34 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:24:34 INFO  [main]: Start create method...
+2023-01-30 19:24:35 INFO  [main]: create method => CORRECT
+2023-01-30 19:24:35 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:24:36 INFO  [main]: get page1
+2023-01-30 19:24:36 INFO  [main]: appointmentList []
+2023-01-30 19:24:36 INFO  [main]: countPage =  0
+2023-01-30 19:24:36 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:24:36 INFO  [main]: get page1
+2023-01-30 19:24:36 INFO  [main]: countPage =  0
+2023-01-30 19:24:36 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:24:36 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:24:36 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:24:36 INFO  [main]: get sortnull
+2023-01-30 19:24:36 INFO  [main]: execute without sort
+2023-01-30 19:24:36 INFO  [main]: get page1
+2023-01-30 19:24:36 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:27:41 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:27:41 INFO  [main]: Start create method...
+2023-01-30 19:27:42 INFO  [main]: create method => CORRECT
+2023-01-30 19:27:42 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:27:43 INFO  [main]: get page1
+2023-01-30 19:27:43 INFO  [main]: appointmentList []
+2023-01-30 19:27:43 INFO  [main]: countPage =  0
+2023-01-30 19:27:43 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:27:43 INFO  [main]: get page1
+2023-01-30 19:27:43 INFO  [main]: countPage =  0
+2023-01-30 19:27:43 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:27:43 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:27:43 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:27:43 INFO  [main]: get sortnull
+2023-01-30 19:27:43 INFO  [main]: execute without sort
+2023-01-30 19:27:43 INFO  [main]: get page1
+2023-01-30 19:27:43 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:30:16 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:30:16 INFO  [main]: Start create method...
+2023-01-30 19:30:17 INFO  [main]: create method => CORRECT
+2023-01-30 19:30:17 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:30:18 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:30:18 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:30:18 INFO  [main]: get sortnull
+2023-01-30 19:30:18 INFO  [main]: execute without sort
+2023-01-30 19:30:18 INFO  [main]: get page1
+2023-01-30 19:30:18 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:33:20 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:33:20 INFO  [main]: Start create method...
+2023-01-30 19:33:20 INFO  [main]: create method => CORRECT
+2023-01-30 19:33:20 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:33:21 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:33:21 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:33:21 INFO  [main]: get sortnull
+2023-01-30 19:33:21 INFO  [main]: execute without sort
+2023-01-30 19:33:21 INFO  [main]: get page1
+2023-01-30 19:33:21 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:35:53 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:35:53 INFO  [main]: Start create method...
+2023-01-30 19:35:54 INFO  [main]: create method => CORRECT
+2023-01-30 19:35:54 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:35:55 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:35:55 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:35:55 INFO  [main]: get sortnull
+2023-01-30 19:35:55 INFO  [main]: execute without sort
+2023-01-30 19:35:55 INFO  [main]: get page1
+2023-01-30 19:35:55 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:41:31 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:41:31 INFO  [main]: Start create method...
+2023-01-30 19:41:31 INFO  [main]: create method => CORRECT
+2023-01-30 19:41:31 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:41:32 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:41:32 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:41:32 INFO  [main]: get sortnull
+2023-01-30 19:41:32 INFO  [main]: execute without sort
+2023-01-30 19:41:32 INFO  [main]: get page1
+2023-01-30 19:41:32 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:48:30 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:48:30 INFO  [main]: Start create method...
+2023-01-30 19:48:31 INFO  [main]: create method => CORRECT
+2023-01-30 19:48:31 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:48:31 INFO  [main]: get page1
+2023-01-30 19:48:31 INFO  [main]: appointmentList []
+2023-01-30 19:48:31 INFO  [main]: countPage =  0
+2023-01-30 19:48:31 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:49:47 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:49:47 INFO  [main]: Start create method...
+2023-01-30 19:49:48 INFO  [main]: create method => CORRECT
+2023-01-30 19:49:48 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:49:48 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:49:48 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:49:48 INFO  [main]: get sortnull
+2023-01-30 19:49:48 INFO  [main]: execute without sort
+2023-01-30 19:49:48 INFO  [main]: get page1
+2023-01-30 19:49:48 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:54:08 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:54:08 INFO  [main]: Start create method...
+2023-01-30 19:54:13 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:54:13 INFO  [main]: Start create method...
+2023-01-30 19:54:13 INFO  [main]: create method => CORRECT
+2023-01-30 19:54:13 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:54:14 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:54:14 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:54:14 INFO  [main]: get sortnull
+2023-01-30 19:54:14 INFO  [main]: execute without sort
+2023-01-30 19:54:14 INFO  [main]: get page1
+2023-01-30 19:54:14 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:55:39 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:55:39 INFO  [main]: Start create method...
+2023-01-30 19:55:39 INFO  [main]: create method => CORRECT
+2023-01-30 19:55:39 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:55:40 INFO  [main]: get page1
+2023-01-30 19:55:40 INFO  [main]: appointmentList []
+2023-01-30 19:55:40 INFO  [main]: countPage =  0
+2023-01-30 19:55:40 INFO  [main]: req.setAttributes => Correct
+2023-01-30 19:55:40 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:55:40 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:55:40 INFO  [main]: get sortnull
+2023-01-30 19:55:40 INFO  [main]: execute without sort
+2023-01-30 19:55:40 INFO  [main]: get page1
+2023-01-30 19:55:40 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:56:38 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:56:38 INFO  [main]: Start create method...
+2023-01-30 19:56:39 INFO  [main]: create method => CORRECT
+2023-01-30 19:56:39 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:56:40 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 19:56:40 INFO  [main]: Check role admin CORRECT
+2023-01-30 19:56:40 INFO  [main]: get sortnull
+2023-01-30 19:56:40 INFO  [main]: execute without sort
+2023-01-30 19:56:40 INFO  [main]: get page1
+2023-01-30 19:56:40 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 19:59:32 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 19:59:32 INFO  [main]: Start create method...
+2023-01-30 19:59:33 INFO  [main]: create method => CORRECT
+2023-01-30 19:59:33 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 19:59:33 INFO  [main]: get page1
+2023-01-30 19:59:33 INFO  [main]: appointmentList []
+2023-01-30 19:59:33 INFO  [main]: countPage =  0
+2023-01-30 19:59:33 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:02:02 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:02:02 INFO  [main]: Start create method...
+2023-01-30 20:02:03 INFO  [main]: create method => CORRECT
+2023-01-30 20:02:03 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:02:03 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:02:03 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:02:03 INFO  [main]: get sortnull
+2023-01-30 20:02:03 INFO  [main]: execute without sort
+2023-01-30 20:02:03 INFO  [main]: get page1
+2023-01-30 20:02:03 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:02:17 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:02:17 INFO  [main]: Start create method...
+2023-01-30 20:02:18 INFO  [main]: create method => CORRECT
+2023-01-30 20:02:18 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:02:18 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:02:18 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:02:18 INFO  [main]: get sortnull
+2023-01-30 20:02:18 INFO  [main]: execute without sort
+2023-01-30 20:02:18 INFO  [main]: get page1
+2023-01-30 20:02:18 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:02:37 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:02:37 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:02:37 INFO  [main]: get sortnull
+2023-01-30 20:02:37 INFO  [main]: execute without sort
+2023-01-30 20:02:37 INFO  [main]: get page1
+2023-01-30 20:02:37 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:02:59 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:02:59 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:02:59 INFO  [main]: get sortnull
+2023-01-30 20:02:59 INFO  [main]: execute without sort
+2023-01-30 20:02:59 INFO  [main]: get page1
+2023-01-30 20:02:59 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:03:59 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:03:59 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:03:59 INFO  [main]: get sortnull
+2023-01-30 20:03:59 INFO  [main]: execute without sort
+2023-01-30 20:03:59 INFO  [main]: get page1
+2023-01-30 20:03:59 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:05:00 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:05:00 INFO  [main]: Start create method...
+2023-01-30 20:05:01 INFO  [main]: create method => CORRECT
+2023-01-30 20:05:01 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:05:28 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:05:28 INFO  [main]: Start create method...
+2023-01-30 20:05:29 INFO  [main]: create method => CORRECT
+2023-01-30 20:05:29 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:05:30 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:05:30 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:05:30 INFO  [main]: get sortnull
+2023-01-30 20:05:30 INFO  [main]: execute without sort
+2023-01-30 20:05:30 INFO  [main]: get page1
+2023-01-30 20:05:30 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:06:27 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:06:27 INFO  [main]: Start create method...
+2023-01-30 20:06:27 INFO  [main]: create method => CORRECT
+2023-01-30 20:06:27 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:06:28 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:06:28 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:06:28 INFO  [main]: get sortnull
+2023-01-30 20:06:28 INFO  [main]: execute without sort
+2023-01-30 20:06:28 INFO  [main]: get page1
+2023-01-30 20:06:28 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:06:28 INFO  [main]: appointmentList []
+2023-01-30 20:06:28 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:06:28 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:06:28 INFO  [main]: countPage =  1
+2023-01-30 20:06:28 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:07:31 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:07:31 INFO  [main]: Start create method...
+2023-01-30 20:07:32 INFO  [main]: create method => CORRECT
+2023-01-30 20:07:32 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:07:33 INFO  [main]: get page1
+2023-01-30 20:07:33 INFO  [main]: countPage =  0
+2023-01-30 20:07:33 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:07:33 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:07:33 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:07:33 INFO  [main]: get sortnull
+2023-01-30 20:07:33 INFO  [main]: execute without sort
+2023-01-30 20:07:33 INFO  [main]: get page1
+2023-01-30 20:07:33 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:07:33 INFO  [main]: appointmentList []
+2023-01-30 20:07:33 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:07:33 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:07:33 INFO  [main]: countPage =  1
+2023-01-30 20:07:33 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:18:06 INFO  [main]: get page1
+2023-01-30 20:18:06 INFO  [main]: countPage =  0
+2023-01-30 20:18:06 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:19:11 INFO  [main]: get page1
+2023-01-30 20:19:11 INFO  [main]: countPage =  0
+2023-01-30 20:19:11 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:20:07 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:20:07 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:20:07 INFO  [main]: get sortnull
+2023-01-30 20:20:07 INFO  [main]: execute without sort
+2023-01-30 20:20:07 INFO  [main]: get page1
+2023-01-30 20:20:07 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:20:07 INFO  [main]: appointmentList []
+2023-01-30 20:20:07 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:20:07 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:20:07 INFO  [main]: countPage =  1
+2023-01-30 20:20:07 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:20:07 INFO  [main]: get page1
+2023-01-30 20:20:07 INFO  [main]: countPage =  0
+2023-01-30 20:20:07 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:26:18 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:26:18 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:26:18 INFO  [main]: get sortnull
+2023-01-30 20:26:18 INFO  [main]: execute without sort
+2023-01-30 20:26:18 INFO  [main]: get page1
+2023-01-30 20:26:18 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:26:18 INFO  [main]: appointmentList []
+2023-01-30 20:26:18 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:26:18 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:26:18 INFO  [main]: countPage =  1
+2023-01-30 20:26:18 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:26:18 INFO  [main]: get page1
+2023-01-30 20:26:18 INFO  [main]: countPage =  0
+2023-01-30 20:26:18 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:37:51 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:37:51 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:37:51 INFO  [main]: get sortnull
+2023-01-30 20:37:51 INFO  [main]: execute without sort
+2023-01-30 20:37:51 INFO  [main]: get page1
+2023-01-30 20:37:51 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:37:51 INFO  [main]: appointmentList []
+2023-01-30 20:37:51 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:37:51 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:37:51 INFO  [main]: countPage =  1
+2023-01-30 20:37:51 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:37:51 INFO  [main]: get page1
+2023-01-30 20:37:51 INFO  [main]: countPage =  0
+2023-01-30 20:37:51 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:38:38 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:38:38 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:38:38 INFO  [main]: get sortnull
+2023-01-30 20:38:38 INFO  [main]: execute without sort
+2023-01-30 20:38:38 INFO  [main]: get page1
+2023-01-30 20:38:38 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:38:38 INFO  [main]: appointmentList []
+2023-01-30 20:38:38 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:38:38 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:38:38 INFO  [main]: countPage =  1
+2023-01-30 20:38:38 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:38:38 INFO  [main]: get page1
+2023-01-30 20:38:38 INFO  [main]: countPage =  0
+2023-01-30 20:38:38 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:39:39 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:39:39 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:39:39 INFO  [main]: get sortnull
+2023-01-30 20:39:39 INFO  [main]: execute without sort
+2023-01-30 20:39:39 INFO  [main]: get page1
+2023-01-30 20:39:39 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:39:39 INFO  [main]: appointmentList []
+2023-01-30 20:39:39 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:39:39 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:39:39 INFO  [main]: countPage =  1
+2023-01-30 20:39:39 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:39:39 INFO  [main]: get page1
+2023-01-30 20:39:39 INFO  [main]: countPage =  0
+2023-01-30 20:39:39 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:40:57 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:40:57 INFO  [main]: Start create method...
+2023-01-30 20:40:57 INFO  [main]: create method => CORRECT
+2023-01-30 20:40:57 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:40:57 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:40:57 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:40:57 INFO  [main]: get sortnull
+2023-01-30 20:40:57 INFO  [main]: execute without sort
+2023-01-30 20:40:57 INFO  [main]: get page1
+2023-01-30 20:40:57 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:40:57 INFO  [main]: appointmentList []
+2023-01-30 20:40:57 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:40:57 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:40:57 INFO  [main]: countPage =  1
+2023-01-30 20:40:57 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:40:57 INFO  [main]: get page1
+2023-01-30 20:40:57 INFO  [main]: countPage =  0
+2023-01-30 20:40:57 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:41:07 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:41:07 INFO  [main]: Start create method...
+2023-01-30 20:41:07 INFO  [main]: create method => CORRECT
+2023-01-30 20:41:07 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:41:07 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:41:07 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:41:07 INFO  [main]: get sortnull
+2023-01-30 20:41:07 INFO  [main]: execute without sort
+2023-01-30 20:41:07 INFO  [main]: get page1
+2023-01-30 20:41:07 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:41:07 INFO  [main]: appointmentList []
+2023-01-30 20:41:07 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:41:07 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:41:07 INFO  [main]: countPage =  1
+2023-01-30 20:41:07 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:41:07 INFO  [main]: get page1
+2023-01-30 20:41:07 INFO  [main]: countPage =  0
+2023-01-30 20:41:07 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:41:34 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:41:34 INFO  [main]: Start create method...
+2023-01-30 20:41:34 INFO  [main]: create method => CORRECT
+2023-01-30 20:41:34 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:41:34 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:41:34 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:41:34 INFO  [main]: get sortnull
+2023-01-30 20:41:34 INFO  [main]: execute without sort
+2023-01-30 20:41:34 INFO  [main]: get page1
+2023-01-30 20:41:34 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:41:34 INFO  [main]: appointmentList []
+2023-01-30 20:41:34 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:41:34 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:41:34 INFO  [main]: countPage =  1
+2023-01-30 20:41:34 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:41:34 INFO  [main]: get page1
+2023-01-30 20:41:34 INFO  [main]: countPage =  0
+2023-01-30 20:41:34 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:45:17 INFO  [main]: Execute ==> AddAppointmentCommand...
+2023-01-30 20:45:17 INFO  [main]: Start create method...
+2023-01-30 20:45:17 INFO  [main]: create method => CORRECT
+2023-01-30 20:45:17 INFO  [main]: New appointment create => Appointment{appointmentId=null, doctorId=22, patientId=9, appointmentData=2023-01-31T18:03, appointmentDoctorName='null', appointmentDoctorSurname='null', appointmentDoctorCategory=null, appointmentPatientName='null', appointmentPatientSurname='null'}
+2023-01-30 20:45:17 INFO  [main]: Execute ==> AppointmentListCommand...
+2023-01-30 20:45:17 INFO  [main]: Check role admin CORRECT
+2023-01-30 20:45:17 INFO  [main]: get sortnull
+2023-01-30 20:45:17 INFO  [main]: execute without sort
+2023-01-30 20:45:17 INFO  [main]: get page1
+2023-01-30 20:45:17 INFO  [main]: Start getAllWithLimit method...
+2023-01-30 20:45:17 INFO  [main]: appointmentList []
+2023-01-30 20:45:17 INFO  [main]: Start getCountPatient method...
+2023-01-30 20:45:17 INFO  [main]: getCountPatient method => CORRECT
+2023-01-30 20:45:17 INFO  [main]: countPage =  1
+2023-01-30 20:45:17 INFO  [main]: req.setAttributes => Correct
+2023-01-30 20:45:17 INFO  [main]: get page1
+2023-01-30 20:45:17 INFO  [main]: countPage =  0
+2023-01-30 20:45:17 INFO  [main]: req.setAttributes => Correct
