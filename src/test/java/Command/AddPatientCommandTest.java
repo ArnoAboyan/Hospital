@@ -1,13 +1,11 @@
 package Command;
 
 import DAO.DAOException;
-import DAO.impl.AppointmentDao;
+import DAO.impl.PatientDao;
 import Util.AttributFinal;
 import Util.ConnectionPool;
-import entitys.Appointment;
-import entitys.Category;
 import entitys.Doctor;
-import entitys.Role;
+import entitys.Patient;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -17,19 +15,12 @@ import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.when;
 
-class AddDoctorCommandTest {
-    // mock connection to DB//
+class AddPatientCommandTest {
     MockedStatic<ConnectionPool> dsStatic = mockStatic(ConnectionPool.class);
     static DataSource dataSourceMock;
     Connection con;
@@ -41,17 +32,16 @@ class AddDoctorCommandTest {
 
     //ENTITYS//
 
-    Doctor doctor;
+    Patient patient;
 
     //MOCK CLASSES//
-
-
+    PatientDao patientDao;
 
     //OTHER//
-    String sort = "appointments_data";
+    String dateofbirth;
 
     @BeforeEach
-    void SetUp(){
+    void setUp() {
         //CONFIG MOCK CONNECTION TO DB//
 
         con = mock(Connection.class);
@@ -65,54 +55,57 @@ class AddDoctorCommandTest {
         rsTwo = mock(ResultSet.class);
 
         //OTHER SETTINGS FOR TEST//
+        patientDao = mock(PatientDao.class);
 
-        doctor = new Doctor();
-        doctor.setDoctorName("DoctorTest");
-        doctor.setDoctorSurname("DoctorTest");
-        doctor.setLogin("DoctorTest");
-        doctor.setPassword("DoctorTest");
-        doctor.setCategory(2);
-        doctor.setRole(2);
+        dateofbirth = "2021-11-09";
+
+
+        patient = new Patient();
+        patient.setPatientName("patientTest");
+        patient.setPatientSurname("patientTest");
+        patient.setPatientDateOfBirth(Date.valueOf(dateofbirth));
+        patient.setPatientGender("male");
+
 
     }
 
 
     @Test
-    void executeTest() throws SQLException, DAOException, CommandException {
+    void execute() throws SQLException, DAOException, CommandException {
         HttpSession session = mock(HttpSession.class);
         HttpServletRequest req = mock(HttpServletRequest.class);
         HttpServletResponse resp = mock(HttpServletResponse.class);
 
         when(req.getSession()).thenReturn(session);
 
-
-        when(req.getParameter("name")).thenReturn(doctor.getDoctorName());
-        when(req.getParameter("surname")).thenReturn(doctor.getDoctorSurname());
-        when(req.getParameter("login")).thenReturn(doctor.getLogin());
-        when(req.getParameter("password")).thenReturn(doctor.getPassword());
-        when(req.getParameter("category")).thenReturn(doctor.getCategory().getTitle());
-        when(req.getParameter("role")).thenReturn(doctor.getRole().getTitle());
+        when(req.getParameter("name")).thenReturn(patient.getPatientName());
+        when(req.getParameter("surname")).thenReturn(patient.getPatientSurname());
+        when(req.getParameter("phone")).thenReturn("0994455566");
+        when(req.getParameter("birthday")).thenReturn(dateofbirth);
+        when(req.getParameter("gender")).thenReturn(patient.getPatientGender());
 
         dsStatic.when(() -> ConnectionPool.getDataSource().getConnection()).thenReturn(dataSourceMock);
         when(dataSourceMock.getConnection()).thenReturn(con);
 
-        when(con.prepareStatement(AttributFinal.CHECK_DOCTOR_AVAILABILITY_BY_LOGIN)).thenReturn(psOne);
+
+
+        when(con.prepareStatement(AttributFinal.CHECK_PATIENT_AVAILABILITY_BY_PHONE)).thenReturn(psOne);
         when(psOne.executeQuery()).thenReturn(rsOne);
         when(rsOne.next()).thenReturn(true).thenReturn(false);
 
 
-        when(con.prepareStatement(AttributFinal.ADDDOCTOR)).thenReturn(psTwo);
+
+        when(con.prepareStatement(AttributFinal.ADDPATIENT)).thenReturn(psTwo);
         when(psTwo.executeQuery()).thenReturn(rsTwo);
         when(rsTwo.next()).thenReturn(true).thenReturn(false);
 
-        AddDoctorCommand addDoctorCommand = new AddDoctorCommand();
+        AddPatientCommand addPatientCommand = new AddPatientCommand();
 
-        String actual = addDoctorCommand.execute(req, resp);
-        String expected = "controller?command=adminpagecommand&page=1";
+        String actual = addPatientCommand.execute(req, resp);
+        String expected = "controller?command=patientlistcommand&page=1";
         assertEquals(actual, expected);
 
     }
-
 
     @AfterEach
     public void tearDown() {

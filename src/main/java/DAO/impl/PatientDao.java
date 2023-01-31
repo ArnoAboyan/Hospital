@@ -359,7 +359,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
         return patientList;
     }
 
-    //method check login is exist
+    //method check phone is exist
     public boolean isExistPhoneNumber(String phone) throws DAOException {
         logger.info("Start isExistPhoneNumber method...");
 
@@ -376,7 +376,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             }
 
 
-            if (patient.getPatientPhoneString() != null) {
+            if (patient.getPatientPhone() > 0 ) {
                 //if exist
                 logger.info("Find patient by phone " + phone + " => TRUE ");
                 logger.info("isExistPhoneNumber method => CORRECT");
@@ -391,7 +391,6 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             logger.error("isExistPhoneNumber method => FALSE " + e.getMessage());
             throw new DAOException(e);
         }
-
     }
 
     public boolean isExistById(int patientid) throws DAOException {

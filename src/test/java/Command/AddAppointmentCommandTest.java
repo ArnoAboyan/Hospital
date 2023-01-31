@@ -38,8 +38,8 @@ class AddAppointmentCommandTest {
     ResultSet rsTwo;
 
     Appointment appointment;
-    int doctorid;
-    int patientid;
+//    int doctorid;
+//    int patientid;
     String datetimeMock;
 
     @BeforeEach
@@ -68,9 +68,7 @@ class AddAppointmentCommandTest {
         appointment.setPatientId(9);
         appointment.setAppointmentData(LocalDateTime.parse(datetime, formatter));
 
-//
-//       int doctorid = 22;
-//       int patientid = 18;
+
 
     }
 

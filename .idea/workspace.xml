@@ -10,12 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v1.5 testing">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Command/AddDoctorCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Command/AddAppointmentCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AddAppointmentCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AppointmentListCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AppointmentListCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AddDoctorCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AddDoctorCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,18 +85,34 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestWithCoverage">
-    <configuration name="AppointmentListCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddDoctorCommandTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hospital" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java.Command.*" />
+          <option name="PATTERN" value="Command.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Hospital.Command" />
-      <option name="MAIN_CLASS_NAME" value="java.Command.AppointmentListCommandTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Command" />
+      <option name="MAIN_CLASS_NAME" value="Command.AddDoctorCommandTest" />
+      <option name="METHOD_NAME" value="executeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddPatientCommandTest.execute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hospital" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Command" />
+      <option name="MAIN_CLASS_NAME" value="Command.AddPatientCommandTest" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,22 +143,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="Command" />
       <option name="MAIN_CLASS_NAME" value="Command.AppointmentListCommandTest" />
-      <option name="METHOD_NAME" value="executeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppointmentListCommandTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hospital" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="java.Command.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Hospital.Command" />
-      <option name="MAIN_CLASS_NAME" value="java.Command.AppointmentListCommandTest" />
       <option name="METHOD_NAME" value="executeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -279,20 +280,20 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestWithCoverage" />
+      <item itemvalue="JUnit.AddDoctorCommandTest.executeTest" />
+      <item itemvalue="JUnit.AddPatientCommandTest.execute" />
       <item itemvalue="JUnit.AppointmentListCommandTest.executeTest (1)" />
       <item itemvalue="JUnit.AppointmentListCommandTest.executeWithOutSortTest" />
       <item itemvalue="JUnit.AppointmentListCommandTest.executeWithSortTest" />
-      <item itemvalue="JUnit.AppointmentListCommandTest" />
-      <item itemvalue="JUnit.AppointmentListCommandTest.executeTest" />
       <item itemvalue="Tomcat Server.Tomcat 10" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddDoctorCommandTest.executeTest" />
+        <item itemvalue="JUnit.AddPatientCommandTest.execute" />
         <item itemvalue="JUnit.AppointmentListCommandTest.executeTest (1)" />
         <item itemvalue="JUnit.AppointmentListCommandTest.executeWithSortTest" />
         <item itemvalue="JUnit.AppointmentListCommandTest.executeWithOutSortTest" />
-        <item itemvalue="JUnit.AppointmentListCommandTest.executeTest" />
-        <item itemvalue="JUnit.AppointmentListCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -309,6 +310,7 @@
       <workItem from="1674985730430" duration="1453000" />
       <workItem from="1674992012407" duration="10002000" />
       <workItem from="1675089470356" duration="11995000" />
+      <workItem from="1675164070077" duration="6644000" />
     </task>
     <task id="LOCAL-00001" summary="v1 created">
       <created>1674489012404</created>
@@ -409,7 +411,10 @@
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest.ic" NAME="AppointmentListCommandTest Coverage Results" MODIFIED="1674933213771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1675104314577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hospital$AddPatientCommandTest_execute.ic" NAME="AddPatientCommandTest.execute Coverage Results" MODIFIED="1675169229841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Command.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1675170321918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest_executeWithOutSort.ic" NAME="AppointmentListCommandTest.executeWithOutSort Coverage Results" MODIFIED="1674932527756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>
