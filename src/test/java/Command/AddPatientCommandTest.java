@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class AddPatientCommandTest {
+    // mock connection to DB//
     MockedStatic<ConnectionPool> dsStatic = mockStatic(ConnectionPool.class);
     static DataSource dataSourceMock;
     Connection con;
@@ -71,7 +72,7 @@ class AddPatientCommandTest {
 
 
     @Test
-    void execute() throws SQLException, DAOException, CommandException {
+    void executeTest() throws SQLException, DAOException, CommandException {
         HttpSession session = mock(HttpSession.class);
         HttpServletRequest req = mock(HttpServletRequest.class);
         HttpServletResponse resp = mock(HttpServletResponse.class);

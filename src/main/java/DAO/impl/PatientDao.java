@@ -4,7 +4,6 @@ import DAO.DAOException;
 import DAO.EntityDAO;
 import Util.AttributFinal;
 import Util.ConnectionPool;
-import entitys.Doctor;
 import entitys.Patient;
 import org.apache.log4j.Logger;
 
@@ -97,7 +96,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
     }
 
     @Override
-    public void delete(Integer patientid) {
+    public boolean delete(Integer patientid) {
         logger.info("Start delete method...");
 
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -106,6 +105,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
             preparedStatement.executeUpdate();
             logger.info("delete method => CORRECT");
+            return true;
         } catch (SQLException e) {
             logger.error("delete method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
@@ -378,12 +378,12 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
 
             if (patient.getPatientPhone() > 0 ) {
                 //if exist
-                logger.info("Find patient by phone " + phone + " => TRUE ");
+                logger.info("Find patient by phone number " + phone + " => TRUE ");
                 logger.info("isExistPhoneNumber method => CORRECT");
                 return true;
             } else {
                 //if not exist
-                logger.info("Find patient by login " + phone + " => FALSE ");
+                logger.info("Find patient by phone number " + phone + " => FALSE ");
                 return false;
             }
 

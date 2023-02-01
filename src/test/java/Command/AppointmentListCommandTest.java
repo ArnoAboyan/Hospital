@@ -27,6 +27,7 @@ class AppointmentListCommandTest {
     MockedStatic<ConnectionPool> dsStatic = mockStatic(ConnectionPool.class);
     static DataSource dataSourceMock;
     Connection con;
+
     PreparedStatement psOne;
     ResultSet rsOne;
     PreparedStatement psTwo;

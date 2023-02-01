@@ -1,11 +1,9 @@
 package DAO.impl;
 
-import Command.PatientListByDoctor;
 import DAO.DAOException;
 import DAO.EntityDAO;
 import Util.AttributFinal;
 import Util.ConnectionPool;
-import entitys.Appointment;
 import entitys.Doctor;
 import org.apache.log4j.Logger;
 
@@ -101,7 +99,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
 
     @Override
-    public void delete(Integer doctorid) {
+    public boolean delete(Integer doctorid) {
         logger.info("Start delete method...");
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(AttributFinal.DELETEDOCTOR);) {
@@ -109,6 +107,7 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
             preparedStatement.executeUpdate();
             logger.info("delete method => CORRECT");
+            return true;
         } catch (SQLException e) {
             logger.error("delete method => FALSE " + e.getMessage());
             throw new RuntimeException(e);

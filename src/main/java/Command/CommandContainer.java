@@ -9,7 +9,7 @@ public class CommandContainer {
 
     private static Map<String, Command> commands;
 
-    private CommandContainer() {
+    public CommandContainer() {
     }
 
     static{

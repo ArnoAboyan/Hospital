@@ -84,7 +84,7 @@ public class AdminPageCommand implements Command{
     }
 
 //execute with sort//
-    private String executeWithSort(HttpServletRequest req, DoctorDao doctorDao, String sort) throws DAOException, CommandException, SQLException {
+    public String executeWithSort(HttpServletRequest req, DoctorDao doctorDao, String sort) throws DAOException, CommandException, SQLException {
         int countOfPAtients ;
 
         String page = req.getParameter("page");

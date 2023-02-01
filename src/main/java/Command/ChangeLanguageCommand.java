@@ -15,7 +15,6 @@ public class ChangeLanguageCommand implements Command {
         req.setAttribute("currentAddressPage", result);
         logger.info("servletPath = " + result);
 
-
         return "changeLocale.jsp";
     }
 

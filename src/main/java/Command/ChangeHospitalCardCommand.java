@@ -38,7 +38,7 @@ public class ChangeHospitalCardCommand implements Command {
 
     }
 
-    private void createHospitalCard(HttpServletRequest req) throws DAOException {
+    public void createHospitalCard(HttpServletRequest req) throws DAOException {
 
 
         int doctorid = Integer.parseInt(req.getParameter("doctorid"));

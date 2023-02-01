@@ -9,7 +9,7 @@ public interface EntityDAO<ID, Entity> {
 
    boolean update(Entity entity);
 
-   void delete(ID entity);
+   boolean delete(ID entity);
 
     List<Entity> getAll()throws DAOException;
 

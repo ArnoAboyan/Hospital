@@ -4,9 +4,7 @@ import DAO.DAOException;
 import DAO.EntityDAO;
 import Util.AttributFinal;
 import Util.ConnectionPool;
-import entitys.Doctor;
 import entitys.HospitalCard;
-import entitys.Patient;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -104,8 +102,8 @@ public class HospitalCardDao implements EntityDAO<Integer, HospitalCard> {
     }
 
     @Override
-    public void delete(Integer entity) {
-
+    public boolean delete(Integer entity) {
+       return false;
     }
 
     @Override

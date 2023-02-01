@@ -1,7 +1,6 @@
 package Command;
 
 import DAO.DAOException;
-import DAO.impl.AppointmentDao;
 import Util.AttributFinal;
 import Util.ConnectionPool;
 import entitys.Appointment;
@@ -24,9 +23,7 @@ import java.time.format.DateTimeFormatter;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class AddAppointmentCommandTest {
-  //  AppointmentDao appointmentDaoMock = mock(AppointmentDao.class);
-
+class DeleteAppointmentCommandTest {
 //    mock connection to DB//
 
     MockedStatic<ConnectionPool> dsStatic = mockStatic(ConnectionPool.class);
@@ -38,13 +35,12 @@ class AddAppointmentCommandTest {
     ResultSet rsTwo;
 
     Appointment appointment;
-//    int doctorid;
-//    int patientid;
+
     String datetimeMock;
 
-    @BeforeEach
-    void setUp() {
 
+    @BeforeEach
+    void setUp(){
         //CONFIG MOCK CONNECTION TO DB//
 
         con = mock(Connection.class);
@@ -64,6 +60,7 @@ class AddAppointmentCommandTest {
         String datetime = "2023-11-09 10:30";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         appointment = new Appointment();
+        appointment.setAppointmentId(30);
         appointment.setDoctorId(22);
         appointment.setPatientId(9);
         appointment.setAppointmentData(LocalDateTime.parse(datetime, formatter));
@@ -73,33 +70,43 @@ class AddAppointmentCommandTest {
     }
 
     @Test
-   public void executeTest() throws DAOException, CommandException, SQLException {
+    void executeTest() throws SQLException, DAOException, CommandException {
         HttpSession session = mock(HttpSession.class);
         HttpServletRequest req = mock(HttpServletRequest.class);
         HttpServletResponse resp = mock(HttpServletResponse.class);
 
         when(req.getSession()).thenReturn(session);
 
-        when(req.getParameter("doctor")).thenReturn("22");
-        when(req.getParameter("patientid")).thenReturn("9");
-        when(req.getParameter("appointmentdata")).thenReturn(datetimeMock);
+
+        when(req.getParameter("appointmentid")).thenReturn(String.valueOf(appointment.getAppointmentId()));
+
 
 
 
         dsStatic.when(() -> ConnectionPool.getDataSource().getConnection()).thenReturn(dataSourceMock);
         when(dataSourceMock.getConnection()).thenReturn(con);
-        when(con.prepareStatement(AttributFinal.ADDDAPPOINTMENT)).thenReturn(psOne);
+
+        when(con.prepareStatement(AttributFinal.CHECK_APPOINTMENT_AVAILABILITY_BY_ID)).thenReturn(psOne);
         when(psOne.executeQuery()).thenReturn(rsOne);
+        when(rsOne.next()).thenReturn(true).thenReturn(true);
+
+
+        when(con.prepareStatement(AttributFinal.DELETEAPPOINTMENT)).thenReturn(psTwo);
+        when(psTwo.executeQuery()).thenReturn(rsTwo);
         when(rsTwo.next()).thenReturn(true).thenReturn(false);
 
-        AddAppointmentCommand addAppointmentCommand = new AddAppointmentCommand();
+        DeleteAppointmentCommand deleteAppointmentCommand = new DeleteAppointmentCommand();
 
-        String actual = addAppointmentCommand.execute(req, resp);
-        String expected = "controller?command=patientlistcommand&page=1";
+        String actual = deleteAppointmentCommand.execute(req, resp);
+        String expected = "controller?command=appointmentpagecommand&page=1";
         assertEquals(actual, expected);
+
     }
+
+
     @AfterEach
     public void tearDown() {
         dsStatic.close();
     }
 }
+
