@@ -9,27 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v1.6 testing">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Command/AdminPageCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Command/ChangeHospitalCardCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Command/ChangeLanguageCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Command/CommandContainerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Command/DeleteAppointmentCommandTest.java" afterDir="false" />
+    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v1.7 testing">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Command/DeleteDoctorCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Command/DeletePatientCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Command/HospitalCardByIdTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Command/LogoutCommandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AdminPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AdminPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/ChangeHospitalCardCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/ChangeHospitalCardCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/ChangeLanguageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/ChangeLanguageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Command/CommandContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/CommandContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/EntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/EntityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/AppointmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/AppointmentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/DoctorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/DoctorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/HospitalCardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/HospitalCardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AddAppointmentCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AddAppointmentCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AppointmentListCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AppointmentListCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +85,7 @@
       <recent name="filter" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10">
+  <component name="RunManager" selected="JUnit.TestWithCoverage">
     <configuration name="AddDoctorCommandTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hospital" />
       <extension name="coverage">
@@ -324,7 +311,7 @@
       <workItem from="1674985730430" duration="1453000" />
       <workItem from="1674992012407" duration="10002000" />
       <workItem from="1675089470356" duration="11995000" />
-      <workItem from="1675164070077" duration="21918000" />
+      <workItem from="1675164070077" duration="28819000" />
     </task>
     <task id="LOCAL-00001" summary="v1 created">
       <created>1674489012404</created>
@@ -403,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675170755096</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="v1.7 testing">
+      <created>1675275115433</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675275115433</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +421,8 @@
     <MESSAGE value="v1.4 Validation" />
     <MESSAGE value="v1.5 testing" />
     <MESSAGE value="v1.6 testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.6 testing" />
+    <MESSAGE value="v1.7 testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.7 testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest.ic" NAME="AppointmentListCommandTest Coverage Results" MODIFIED="1674933213771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -436,13 +431,14 @@
     <SUITE FILE_PATH="coverage/Hospital$AddPatientCommandTest_execute.ic" NAME="AddPatientCommandTest.execute Coverage Results" MODIFIED="1675169229841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Command.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1675274973514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1675290224513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest_executeWithOutSort.ic" NAME="AppointmentListCommandTest.executeWithOutSort Coverage Results" MODIFIED="1674932527756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Hospital$AddAppointmentCommandTest_executeTest.ic" NAME="AppointmentListCommandTest.executeTest Coverage Results" MODIFIED="1674933335632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Hospital$Tomcat_10.ic" NAME="Tomcat 10 Coverage Results" MODIFIED="1675284327118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest_executeTest__1_.ic" NAME="AppointmentListCommandTest.executeTest (1) Coverage Results" MODIFIED="1675101885857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Command.*</FILTER>
     </SUITE>

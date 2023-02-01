@@ -107,12 +107,11 @@ public class DoctorDao implements EntityDAO<Integer, Doctor> {
 
             preparedStatement.executeUpdate();
             logger.info("delete method => CORRECT");
-            return true;
         } catch (SQLException e) {
             logger.error("delete method => FALSE " + e.getMessage());
             throw new RuntimeException(e);
         }
-
+        return true;
     }
 
     @Override
