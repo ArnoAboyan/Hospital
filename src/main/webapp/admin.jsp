@@ -157,8 +157,8 @@
                             </div>
                         <td>
                                 <%--  MODAL UPDATE--%>
-                            <button type="button" class="btn btn-info btn-sm " data-bs-toggle="modal"
-                                    data-bs-target="#updateDoctorModal${doctor.doctorId}">Update
+                            <button type="button" class="btn btn-outline-info btn-sm " data-bs-toggle="modal"
+                                    data-bs-target="#updateDoctorModal${doctor.doctorId}"><fmt:message key="admin_jsp.Update"/>
                             </button>
                             <div class="modal " id="updateDoctorModal${doctor.doctorId}" tabindex="-1">
                                 <div class="modal-dialog">
@@ -248,7 +248,7 @@
                     <input type="hidden" name="command" value="patientlistbydoctor">
                     <input type="hidden" name="patientsfordoctorid" value=${doctor.doctorId}>
                     <input type="hidden" name="page" value=1>
-                    <button type="submit" class="btn btn-primary btn-sm"><fmt:message
+                    <button type="submit" class="btn btn-outline-primary"><fmt:message
                             key="admin_jsp.doctorPatients"/></button>
                 </form>
             </td>
@@ -394,12 +394,12 @@
                         <c:when test="${page - 1 > 0}">
                             <li class="page-item">
                                 <a href="controller?command=adminpagecommand&page=${page-1}"
-                                   class="btn btn-primary btn-sm">⮜</a>
+                                   class="btn btn-outline-primary btn-sm">⮜</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮜</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled" >⮜</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -407,12 +407,12 @@
                         <c:when test="${page + 1 <= countPage}">
                             <li class="page-item">
                                 <a href="controller?command=adminpagecommand&page=${page+1}"
-                                   class="btn btn-primary btn-sm">⮞</a>
+                                   class="btn btn-outline-primary btn-sm">⮞</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮞</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled" >⮞</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -422,12 +422,12 @@
                         <c:when test="${page - 1 > 0}">
                             <li class="page-item">
                                 <a href="controller?command=adminpagecommand&page=${page-1}&sort=${sort}"
-                                   class="btn btn-primary btn-sm">⮜</a>
+                                   class="btn btn-outline-primary btn-sm">⮜</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮜</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled" >⮜</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -435,12 +435,12 @@
                         <c:when test="${page + 1 <= countPage}">
                             <li class="page-item">
                                 <a href="controller?command=adminpagecommand&page=${page+1}&sort=${sort}"
-                                   class="btn btn-primary btn-sm">⮞</a>
+                                   class="btn btn-outline-primary btn-sm">⮞</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮞</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled" >⮞</a>
                             </li>
                         </c:otherwise>
                     </c:choose>

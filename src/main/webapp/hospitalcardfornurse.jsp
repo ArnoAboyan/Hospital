@@ -7,7 +7,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="resources"/>
 <c:set var="currentAddressPage"
-       value="controller?command=hospitalcardbypatientid&patientid=${patient.patientId}&doctorid=${doctor.doctorId}"
+       value="controller?command=hospitalcardbyid&hospitalCardId=${hospitalcard.hospitalCardId}"
        scope="session"></c:set>
 
 <html>

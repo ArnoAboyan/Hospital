@@ -23,7 +23,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" >Hospital</a>
       <div class="container-fluid">
-        <a href="controller?command=patientlistbydoctor&patientsfordoctorid=18&page=1" style="background-color: #e3f2fd;" class="btn btn-outline-secondary" role="button" ><fmt:message key="admin_jsp.hospitalcard<Back"/></a>
+        <a href="controller?command=patientlistbydoctor&page=1&patientsfordoctorid=${doctor.doctorId}" style="background-color: #e3f2fd;" class="btn btn-outline-secondary" role="button" ><fmt:message key="admin_jsp.hospitalcard<Back"/></a>
         </button>
       </div>
       </div>

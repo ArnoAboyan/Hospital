@@ -10,7 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v2.0 testing">
+      <change afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Hospital_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Hospital_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/FIX add" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/FIX add" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/resources_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/resources_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources_ua.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hospitalcard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hospitalcard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hospitalcardfornurse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hospitalcardfornurse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hospitalcardlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hospitalcardlist.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +35,7 @@
         <option value="Class" />
         <option value="JUnit4 Test Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -54,7 +67,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/WIZ/IdeaProjects/Hospital/src",
+    "last_opened_file_path": "C:/Users/WIZ/IdeaProjects/Hospital/src/main/resources",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -64,12 +77,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WIZ\IdeaProjects\Hospital\src\main\resources" />
       <recent name="C:\Users\WIZ\IdeaProjects\Hospital\src" />
       <recent name="C:\Users\WIZ\IdeaProjects\Hospital\src\main\java" />
       <recent name="C:\Users\WIZ\IdeaProjects\Hospital" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WIZ\IdeaProjects\Hospital\src\main\webapp\WEB-INF\lib" />
+      <recent name="C:\Users\WIZ\IdeaProjects\Hospital\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Command" />
@@ -79,7 +97,7 @@
       <recent name="filter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestWithCoverage">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10">
     <configuration name="AddDoctorCommandTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hospital" />
       <extension name="coverage">
@@ -305,7 +323,7 @@
       <workItem from="1674985730430" duration="1453000" />
       <workItem from="1674992012407" duration="10002000" />
       <workItem from="1675089470356" duration="11995000" />
-      <workItem from="1675164070077" duration="41368000" />
+      <workItem from="1675164070077" duration="57069000" />
     </task>
     <task id="LOCAL-00001" summary="v1 created">
       <created>1674489012404</created>
@@ -412,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675510243446</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="v2.0 testing">
+      <created>1675529699630</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675529699630</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

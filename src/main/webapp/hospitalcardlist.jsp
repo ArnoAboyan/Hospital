@@ -3,7 +3,7 @@
 <%@ taglib prefix="mylib" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setBundle basename="resources"/>
-<c:set var="currentAddressPage" value="controller?command=patientlistcommand&page=1" scope="session"></c:set>
+<c:set var="currentAddressPage" value="controller?command=hospitalcardlist&page=1" scope="session"></c:set>
 
 <html>
 <head>
@@ -40,11 +40,11 @@
                     <tr>
                         <th scope="col"><a class="list-group-item list-group-item-action list-group-item-info"
                                            style="background-color: #e3f2fd;"
-                                           href="controller?command=hospitalcardlist&page=1&sort=patientid">patientid</a>
+                                           href="controller?command=hospitalcardlist&page=1&sort=patientid"><fmt:message key="admin_jsp.Patient"/></a>
                         </th>
                         <th scope="col"><a class="list-group-item list-group-item-action list-group-item-info"
                                            style="background-color: #e3f2fd;"
-                                           href="controller?command=hospitalcardlist&page=1&sort=doctorid">doctorid</a>
+                                           href="controller?command=hospitalcardlist&page=1&sort=doctorid"><fmt:message key="admin_jsp.Doctors"/></a>
                         </th>
                     </tr>
                     </thead>
