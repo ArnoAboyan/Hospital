@@ -114,11 +114,8 @@
                                                 <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
                                                     <fmt:message key="admin_jsp.Attention!"/>
                                                 </div>
-                                                >
                                                 <a class="text-secondary text-decoration-none"><fmt:message
-                                                        key="admin_jsp.Delete"/>
-                                                        ${patient.patientName} ${patient.patientSurname}
-                                                    ?</a>
+                                                        key="admin_jsp.Delete"/>${patient.patientName} ${patient.patientSurname}?</a>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">

@@ -6,6 +6,9 @@
 <c:set var="currentAddressPage" value="index.jsp" scope="session"></c:set>
 
 
+
+<c:if test="${currentUser == null}">
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -32,10 +35,9 @@
                             <input type="login" name="login" class="form-control" id="exampleInputEmail1" placeholder="<fmt:message key="admin_jsp.doctorWritelogin"/>" aria-describedby="emailHelp" required minlength="4" maxlength="18">
                         </div>
                         <div class="mb-3">
-
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="<fmt:message key="admin_jsp.doctorWritepassword"/>" name="password" required minlength="4" maxlength="18">
                         </div>
-                        <button type="submit" class="btn btn-secondary btn-lg"><fmt:message key="admin_jsp.Login"/></button>
+                        <button type="submit" class="btn btn-outline-primary"><fmt:message key="admin_jsp.Login"/></button>
 <%--                        <a class="btn btn-info justify-content-center" href="registration.jsp">registration</a>--%>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 <%--                            <a class="btn btn-secondary btn-sm" href="index.jsp" role="button">IndexPage____</a>--%>
@@ -67,3 +69,73 @@
 
 </body>
 </html>
+</c:if>
+
+<c:if test="${currentUser != null}">
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body style="margin-top: 100px; margin-bottom: 170px; background-repeat: no-repeat; background-attachment: fixed; background-image: url('https://phonoteka.org/uploads/posts/2022-01/1643186349_1-phonoteka-org-p-svetlii-belii-fon-1.jpg');">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="position: fixed; left: 0; width: 100%; top: 0; background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" >Hospital</a>
+            </div>
+            <form action="controller" method="get">
+                <input type="hidden" name="command" value="logout">
+                <button type="submit" class="btn btn-outline-secondary" style="background-color: #e3f2fd;"><fmt:message key="admin_jsp.logout"/></button>
+            </form>
+            </div>
+        </nav>
+    </header>
+    <form class="login-form" action="controller" method="post">
+        <div class="mb-3">
+            <input type="hidden" name="command" value="login">
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        </div>
+    </form>
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div>
+    <h2>You are already logged in -> </h2>
+    </div>
+    <div>
+        <form class="login-form" action="controller" method="post">
+        <input type="hidden" name="command" value="login">
+    <button type="submit" class="btn btn-outline-success btn-lg">Account</button>
+            </form>
+    </div>
+
+</div>
+
+</c:if>
+
+
+<footer class="pt-1 my-md-1 pt-md-1 border-top abs "
+        style="position: fixed;
+        bottom: -10px;
+        height: 70px;
+        background: #e3f2fd;
+        width: 100%;
+        left: 0;">
+    <div class="container text-center text-md-left">
+        <div class="d-flex">
+            <div class="p-2 flex-grow-1">Make by Arno</div>
+            <div class="p-2">099 111 22 33</div>
+            <div class="p-2"><mylib:languages></mylib:languages></div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

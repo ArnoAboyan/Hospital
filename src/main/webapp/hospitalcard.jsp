@@ -10,7 +10,6 @@
 
 <html>
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Panel</title>
@@ -75,6 +74,38 @@
   </div>
 
 
+  <!-- Modal discharged -->
+  <div class="modal fade" id="dischargedModal" tabindex="-1" aria-labelledby="exampledischargedModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampledischargedModal">Discharge patient</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
+            <fmt:message key="admin_jsp.Attention!"/>
+          </div>
+          <a class="text-secondary text-decoration-none">${patient.patientName} ${patient.patientSurname}<br>${patient.patientDateOfBirth}<br>
+            ${patient.patientPhone}
+            <br> DIAGNISIS: ${hospitalcard.diagnosis}
+          </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <form action="controller" method="get">
+            <input type="hidden" name="command" value="dischargedcommand">
+            <input type="hidden" name="dischargepatient"
+                   value=${patient.patientId}>
+            <button type="submit" class="btn btn-primary"><fmt:message
+                    key="admin_jsp.Yes"/></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
 
@@ -84,16 +115,44 @@
   <div class="container text-center">
     <div class="row gx-5">
       <div class="col">
-        <div class="p-3 ">
-          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                  data-bs-target="#changecardModal">
+
+
+
+        <div class="d-flex">
+          <div class="p-2 flex-fill"><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                             data-bs-target="#changecardModal">
             <fmt:message key="admin_jsp.hospitalcardChangeCard"/>
           </button>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#visitModal">
+          </div>
+
+          <div class="p-2 flex-fill"><button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#dischargedModal">
+            discharged
+          </button>
+          </div>
+          <div class="p-2 flex-fill"><button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#visitModal">
             <fmt:message key="admin_jsp.hospitalcardVisitHistory"/>
           </button>
           </div>
+        </div>
+
+
+
+<%--        <div class="p-3 ">--%>
+<%--          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"--%>
+<%--                  data-bs-target="#changecardModal">--%>
+<%--            <fmt:message key="admin_jsp.hospitalcardChangeCard"/>--%>
+<%--          </button>--%>
+<%--          <div class="d-grid gap-2 d-md-flex justify-content-md-start">--%>
+<%--          <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#visitModal">--%>
+<%--            <fmt:message key="admin_jsp.hospitalcardVisitHistory"/>--%>
+<%--          </button>--%>
+<%--          </div>--%>
+<%--          <div class="d-grid gap-2 d-md-flex justify-content-md-end">--%>
+<%--            <button type="button" class="btn btn btn-outline-warning " data-bs-toggle="modal" data-bs-target="#dischargedModal">--%>
+<%--              discharged--%>
+<%--            </button>--%>
+<%--          </div>--%>
+
         </div>
       </div>
     </div>
