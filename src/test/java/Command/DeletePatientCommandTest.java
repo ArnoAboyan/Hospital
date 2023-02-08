@@ -55,6 +55,16 @@ class DeletePatientCommandTest {
         patient.setPatientId(2);
 
 
+        doctor = new Doctor();
+        doctor.setDoctorId(1);
+        doctor.setDoctorName("DoctorTest");
+        doctor.setDoctorSurname("DoctorTest");
+        doctor.setCategory(3);
+        doctor.setLogin("asdf");
+        doctor.setPassword("password");
+        doctor.setRole(1);
+        doctor.setCountOfPatients(2);
+
     }
 
 
@@ -63,10 +73,10 @@ class DeletePatientCommandTest {
         HttpSession session = mock(HttpSession.class);
         HttpServletRequest req = mock(HttpServletRequest.class);
         HttpServletResponse resp = mock(HttpServletResponse.class);
-
         when(req.getSession()).thenReturn(session);
-
+        when(session.getAttribute("currentUser")).thenReturn(doctor);
         when(req.getParameter("deletepatient")).thenReturn("2");
+
 
         dsStatic.when(() -> ConnectionPool.getDataSource().getConnection()).thenReturn(dataSourceMock);
         when(dataSourceMock.getConnection()).thenReturn(con);
