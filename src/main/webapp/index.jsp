@@ -101,12 +101,12 @@
     </form>
 <div class="h-100 d-flex align-items-center justify-content-center">
     <div>
-    <h2>You are already logged in -> </h2>
+    <h2><fmt:message key="admin.jsp.alreadyloggedin"/></h2>
     </div>
     <div>
         <form class="login-form" action="controller" method="post">
         <input type="hidden" name="command" value="login">
-    <button type="submit" class="btn btn-outline-success btn-lg">Account</button>
+    <button type="submit" class="btn btn-outline-success btn-lg"><fmt:message key="admin.jsp.Account"/></button>
             </form>
     </div>
 

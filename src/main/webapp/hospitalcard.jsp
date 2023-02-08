@@ -59,7 +59,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel1">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel1"><fmt:message key="admin_jsp.hospitalcardVisitHistory"/></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -79,14 +79,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampledischargedModal">Discharge patient</h1>
+          <h1 class="modal-title fs-5" id="exampledischargedModal"><fmt:message key="admin.jsp.DiscargePatient"/></h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
+          <div class="h4 pb-2 mb-4 text-warning border-bottom border-danger">
             <fmt:message key="admin_jsp.Attention!"/>
           </div>
-          <a class="text-secondary text-decoration-none">${patient.patientName} ${patient.patientSurname}<br>${patient.patientDateOfBirth}<br>
+          <a class="text-secondary text-decoration-none"><fmt:message key="admin.jsp.DiscConfirm"/><br>${patient.patientName} ${patient.patientSurname}<br>${patient.patientDateOfBirth}<br>
             ${patient.patientPhone}
             <br> DIAGNISIS: ${hospitalcard.diagnosis}
           </a>
@@ -95,12 +95,11 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
-          <form action="controller" method="get">
-            <input type="hidden" name="command" value="dischargedcommand">
-            <input type="hidden" name="dischargepatient"
+          <form action="controller" method="post">
+            <input type="hidden" name="command" value="deletepatientcommand">
+            <input type="hidden" name="deletepatient"
                    value=${patient.patientId}>
-            <button type="submit" class="btn btn-primary"><fmt:message
-                    key="admin_jsp.Yes"/></button>
+            <button type="submit" class="btn btn-warning"><fmt:message key="admin.jsp.Discarge"/></button>
           </form>
         </div>
       </div>
@@ -125,33 +124,17 @@
           </button>
           </div>
 
-          <div class="p-2 flex-fill"><button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#dischargedModal">
-            discharged
-          </button>
-          </div>
           <div class="p-2 flex-fill"><button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#visitModal">
             <fmt:message key="admin_jsp.hospitalcardVisitHistory"/>
           </button>
           </div>
+
+          <div class="p-2 flex-fill"><button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#dischargedModal">
+            <fmt:message key="admin.jsp.Discarge"/>
+          </button>
+          </div>
         </div>
 
-
-
-<%--        <div class="p-3 ">--%>
-<%--          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"--%>
-<%--                  data-bs-target="#changecardModal">--%>
-<%--            <fmt:message key="admin_jsp.hospitalcardChangeCard"/>--%>
-<%--          </button>--%>
-<%--          <div class="d-grid gap-2 d-md-flex justify-content-md-start">--%>
-<%--          <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#visitModal">--%>
-<%--            <fmt:message key="admin_jsp.hospitalcardVisitHistory"/>--%>
-<%--          </button>--%>
-<%--          </div>--%>
-<%--          <div class="d-grid gap-2 d-md-flex justify-content-md-end">--%>
-<%--            <button type="button" class="btn btn btn-outline-warning " data-bs-toggle="modal" data-bs-target="#dischargedModal">--%>
-<%--              discharged--%>
-<%--            </button>--%>
-<%--          </div>--%>
 
         </div>
       </div>

@@ -101,7 +101,7 @@
                         <th scope="col"><a class="list-group-item list-group-item-action list-group-item-info"
                                            style="background-color: #e3f2fd;"
                                            href="controller?command=adminpagecommand&page=1&sort=countofpatients"><fmt:message
-                                key="admin_jsp.countOfPatients"/></a>
+                                key="admin_jsp.PatientsArrowDown"/></a>
                         </th>
                     </tr>
                     </thead>
@@ -164,7 +164,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title ">Update Doctor</h5>
+                                            <h5 class="modal-title "><fmt:message key="admin_jsp.UpdateDoctor"/></h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                         </div>
@@ -271,7 +271,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel"><fmt:message key="admin_jsp.doctorAddDoctor"/></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -334,57 +334,6 @@
     </div>
 </div>
 
-<%--<!-- Modal ADD NURSE -->--%>
-<%--<div class="modal fade" id="addNurseModal" tabindex="-1" aria-labelledby="addNurseModal" aria-hidden="true">--%>
-<%--    <div class="modal-dialog">--%>
-<%--        <div class="modal-content">--%>
-
-<%--            <div class="modal-header">--%>
-<%--                <h1 class="modal-title fs-5" id="addNurseModal1">Modal title</h1>--%>
-<%--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
-<%--            </div>--%>
-<%--            <div class="modal-body">--%>
-<%--                <form action="controller" method="post">--%>
-<%--                    <div class="mb-3">--%>
-<%--                        <input type="hidden" name="command" value="adddoctorcommand">--%>
-<%--                        <input type="text" name="name" class="form-control" id="InputNameNurse"--%>
-<%--                               aria-describedby="nameHelp"--%>
-<%--                               required minlength="4" maxlength="18"--%>
-<%--                               placeholder="<fmt:message key="admin_jsp.doctorWritename"/>">--%>
-<%--                    </div>--%>
-<%--                    <div class="mb-3">--%>
-<%--                        <input type="test" class="form-control" id="InputSurnameNurse" name="surname" required--%>
-<%--                               minlength="3"--%>
-<%--                               maxlength="18" placeholder="<fmt:message key="admin_jsp.doctorWritesurname"/>">--%>
-<%--                    </div>--%>
-<%--                    <div class="mb-3">--%>
-<%--                        <input type="login" name="login" class="form-control" id="InputEmailNurse"--%>
-<%--                               aria-describedby="emailHelp" required minlength="4" maxlength="18"--%>
-<%--                               placeholder="<fmt:message key="admin_jsp.doctorWritelogin"/>">--%>
-<%--                    </div>--%>
-<%--                    <div class="mb-3">--%>
-<%--                        <input type="password" class="form-control" id="InputPasswordNurse" name="password" required--%>
-<%--                               minlength="4" maxlength="18"--%>
-<%--                               placeholder="<fmt:message key="admin_jsp.doctorWritepassword"/>">--%>
-<%--                    </div>--%>
-<%--                    <div class="mb-3">--%>
-<%--                        <input type="hidden" class="form-control" id="InputRoleNurse" name="role" value="nurse">--%>
-<%--                    </div>--%>
-<%--                    <div class="mb-3">--%>
-<%--                        <input type="hidden" class="form-control" id="selectCategoryNurse" name="category"--%>
-<%--                               value="nurse">--%>
-<%--                    </div>--%>
-<%--                    <button type="submit" class="btn btn-secondary btn-lg"><fmt:message key="admin_jsp.Add"/></button>--%>
-<%--                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">--%>
-<%--                    </div>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-
-<%--PAGINATION--%>
 <div class="catalog-pagination">
     <nav aria-label="page-navigation">
         <ul class="pagination justify-content-center">

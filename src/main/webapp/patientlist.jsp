@@ -133,14 +133,14 @@
                                     </div>
                                 </div>
                                     <%--    UPDATE PATIENT MODAL--%>
-                                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal"
-                                        data-bs-target="#updatePatientModal${patient.patientId}">Update
+                                <button type="button" class="btn btn-outline-info btn-sm " data-bs-toggle="modal"
+                                        data-bs-target="#updatePatientModal${patient.patientId}"><fmt:message key="admin_jsp.Update"/>
                                 </button>
                                 <div class="modal" id="updatePatientModal${patient.patientId}" tabindex="-1">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title"><fmt:message key="admin_jsp.Delete"/></h5>
+                                                <h5 class="modal-title"><fmt:message key="admin_jsp.UpdatePatient"/></h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                             </div>
@@ -197,7 +197,7 @@
 
 
                                     <%--    ADD APPOINTMENT MODAL--%>
-                                <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal"
+                                <button type="button" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal"
                                         data-bs-target="#addAppointment${patient.patientId}"><fmt:message
                                         key="admin_jsp.patientlistAppointment"/>
                                 </button>
@@ -335,12 +335,12 @@
                         <c:when test="${page - 1 > 0}">
                             <li class="page-item">
                                 <a href="controller?command=patientlistcommand&page=${page-1}"
-                                   class="btn btn-primary btn-sm">⮜</a>
+                                   class="btn btn-outline-primary btn-sm">⮜</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮜</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -348,12 +348,12 @@
                         <c:when test="${page + 1 <= countPage}">
                             <li class="page-item">
                                 <a href="controller?command=patientlistcommand&page=${page+1}"
-                                   class="btn btn-primary btn-sm">⮞</a>
+                                   class="btn btn-outline-primary btn-sm">⮞</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮞</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -363,12 +363,12 @@
                         <c:when test="${page - 1 > 0}">
                             <li class="page-item">
                                 <a href="controller?command=patientlistcommand&page=${page-1}&sort=${sort}"
-                                   class="btn btn-primary btn-sm">⮜</a>
+                                   class="btn btn-outline-primary btn-sm">⮜</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮜</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -376,12 +376,12 @@
                         <c:when test="${page + 1 <= countPage}">
                             <li class="page-item">
                                 <a href="controller?command=patientlistcommand&page=${page+1}&sort=${sort}"
-                                   class="btn btn-primary btn-sm">⮞</a>
+                                   class="btn btn-outline-primary btn-sm">⮞</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮞</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
                             </li>
                         </c:otherwise>
                     </c:choose>

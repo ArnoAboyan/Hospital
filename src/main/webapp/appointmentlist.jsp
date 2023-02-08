@@ -125,24 +125,24 @@
           <c:choose>
             <c:when test="${page - 1 > 0}">
               <li class="page-item">
-                <a href="controller?command=appointmentpagecommand&page=${page-1}" class="btn btn-primary btn-sm">⮜</a>
+                <a href="controller?command=appointmentpagecommand&page=${page-1}" class="btn btn-outline-primary btn-sm">⮜</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮜</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
               </li>
             </c:otherwise>
           </c:choose>
           <c:choose>
             <c:when test="${page + 1 <= countPage}">
               <li class="page-item">
-                <a href="controller?command=appointmentpagecommand&page=${page+1}" class="btn btn-primary btn-sm">⮞</a>
+                <a href="controller?command=appointmentpagecommand&page=${page+1}" class="btn btn-outline-primary btn-sm">⮞</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮞</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
               </li>
             </c:otherwise>
           </c:choose>
@@ -151,24 +151,24 @@
           <c:choose>
             <c:when test="${page - 1 > 0}">
               <li class="page-item">
-                <a href="controller?command=appointmentpagecommand&page=${page-1}&sort=${sort}" class="btn btn-primary btn-sm">⮜</a>
+                <a href="controller?command=appointmentpagecommand&page=${page-1}&sort=${sort}" class="btn btn-outline-primary btn-sm">⮜</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮜</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
               </li>
             </c:otherwise>
           </c:choose>
           <c:choose>
             <c:when test="${page + 1 <= countPage}">
               <li class="page-item">
-                <a href="controller?command=appointmentpagecommand&page=${page+1}&sort=${sort}" class="btn btn-primary btn-sm">⮞</a>
+                <a href="controller?command=appointmentpagecommand&page=${page+1}&sort=${sort}" class="btn btn-outline-primary btn-sm">⮞</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮞</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
               </li>
             </c:otherwise>
           </c:choose>

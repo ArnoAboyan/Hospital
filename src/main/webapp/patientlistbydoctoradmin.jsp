@@ -79,7 +79,7 @@
                   <input type="hidden" name="command" value="hospitalcardbypatientid">
                   <input type="hidden" name="patientid" value=${patient.patientId}>
                   <input type="hidden" name="doctorid" value=${doctorid}>
-                  <button type="submit" class="btn btn-primary" ><fmt:message key="admin_jsp.Card"/></button>
+                  <button type="submit" class="btn btn-outline-primary" ><fmt:message key="admin_jsp.Card"/></button>
                 </form>
               </td>
             </tr>
@@ -102,24 +102,24 @@
           <c:choose>
             <c:when test="${page - 1 > 0}">
               <li class="page-item">
-                <a href="controller?command=patientlistbydoctor&page=${page-1}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-primary btn-sm">⮜</a>
+                <a href="controller?command=patientlistbydoctor&page=${page-1}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-outline-primary btn-sm">⮜</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮜</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
               </li>
             </c:otherwise>
           </c:choose>
           <c:choose>
             <c:when test="${page + 1 <= countPage}">
               <li class="page-item">
-                <a href="controller?command=patientlistbydoctor&page=${page+1}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-primary btn-sm">⮞</a>
+                <a href="controller?command=patientlistbydoctor&page=${page+1}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-outline-primary btn-sm">⮞</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮞</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
               </li>
             </c:otherwise>
           </c:choose>
@@ -128,24 +128,24 @@
           <c:choose>
             <c:when test="${page - 1 > 0}">
               <li class="page-item">
-                <a href="controller?command=patientlistbydoctor&page=${page-1}&sort=${sort}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-primary btn-sm">⮜</a>
+                <a href="controller?command=patientlistbydoctor&page=${page-1}&sort=${sort}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-outline-primary btn-sm">⮜</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮜</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
               </li>
             </c:otherwise>
           </c:choose>
           <c:choose>
             <c:when test="${page + 1 <= countPage}">
               <li class="page-item">
-                <a href="controller?command=patientlistbydoctor&page=${page+1}&sort=${sort}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-primary btn-sm">⮞</a>
+                <a href="controller?command=patientlistbydoctor&page=${page+1}&sort=${sort}&patientsfordoctorid=${doctor.doctorId}" class="btn btn-outline-primary btn-sm">⮞</a>
               </li>
             </c:when>
             <c:otherwise>
               <li class="page-item disabled">
-                <a class="btn btn-secondary btn-sm">⮞</a>
+                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
               </li>
             </c:otherwise>
           </c:choose>

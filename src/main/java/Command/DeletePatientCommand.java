@@ -3,6 +3,7 @@ package Command;
 import DAO.DAOException;
 import DAO.impl.DoctorDao;
 import DAO.impl.PatientDao;
+import entitys.Doctor;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
@@ -13,6 +14,8 @@ public class DeletePatientCommand implements Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws DAOException, CommandException {
         logger.info("Execute ==> DeletePatientCommand...");
+        Doctor currentUser  = (Doctor) req.getSession().getAttribute("currentUser");
+
         int patientid;
 
         PatientDao patientDao = new PatientDao();
@@ -33,7 +36,15 @@ public class DeletePatientCommand implements Command {
         }
 
 
+        String role = currentUser.getRole().getTitle();
+        int doctorId = currentUser.getDoctorId();
+        if (role.equalsIgnoreCase("admin")){
+            return "controller?command=patientlistcommand&page=1";
+        } else if (role.equalsIgnoreCase("doctor")) {
+            return "controller?command=patientlistbydoctor&page=1&patientsfordoctorid="+doctorId;
+        }
+        logger.error("Return on page => False");
+        return "error.jsp";
 
-        return "controller?command=patientlistcommand&page=1";
     }
 }

@@ -40,11 +40,11 @@
                     <tr>
                         <th scope="col"><a class="list-group-item list-group-item-action list-group-item-info"
                                            style="background-color: #e3f2fd;"
-                                           href="controller?command=hospitalcardlist&page=1&sort=patientid"><fmt:message key="admin_jsp.Patient"/></a>
+                                           href="controller?command=hospitalcardlist&page=1&sort=patientid"><fmt:message key="admin_jsp.PatientsArrowDown"/></a>
                         </th>
                         <th scope="col"><a class="list-group-item list-group-item-action list-group-item-info"
                                            style="background-color: #e3f2fd;"
-                                           href="controller?command=hospitalcardlist&page=1&sort=doctorid"><fmt:message key="admin_jsp.Doctors"/></a>
+                                           href="controller?command=hospitalcardlist&page=1&sort=doctorid"><fmt:message key="admin_jsp.DoctorArrowDown"/></a>
                         </th>
                     </tr>
                     </thead>
@@ -145,12 +145,12 @@
                         <c:when test="${page - 1 > 0}">
                             <li class="page-item">
                                 <a href="controller?command=hospitalcardlist&page=${page-1}"
-                                   class="btn btn-primary btn-sm">⮜</a>
+                                   class="btn btn-outline-primary btn-sm">⮜</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮜</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -158,12 +158,12 @@
                         <c:when test="${page + 1 <= countPage}">
                             <li class="page-item">
                                 <a href="controller?command=hospitalcardlist&page=${page+1}"
-                                   class="btn btn-primary btn-sm">⮞</a>
+                                   class="btn btn-outline-primary btn-sm">⮞</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮞</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -173,12 +173,12 @@
                         <c:when test="${page - 1 > 0}">
                             <li class="page-item">
                                 <a href="controller?command=hospitalcardlist&page=${page-1}&sort=${sort}"
-                                   class="btn btn-primary btn-sm">⮜</a>
+                                   class="btn btn-outline-primary btn-sm">⮜</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮜</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮜</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
@@ -186,12 +186,12 @@
                         <c:when test="${page + 1 <= countPage}">
                             <li class="page-item">
                                 <a href="controller?command=hospitalcardlist&page=${page+1}&sort=${sort}"
-                                   class="btn btn-primary btn-sm">⮞</a>
+                                   class="btn btn-outline-primary btn-sm">⮞</a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
-                                <a class="btn btn-secondary btn-sm">⮞</a>
+                                <a class="btn btn-outline-secondary btn-sm disabled">⮞</a>
                             </li>
                         </c:otherwise>
                     </c:choose>
