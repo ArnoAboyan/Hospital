@@ -39,7 +39,7 @@ public class UpdatePatientCommand implements Command{
         } else throw new CommandException("The entered surname is not correct");
         // phone namber validation
         if (phone.matches("(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?\\d{3}\\d{4}")) {
-            patient.setPatientPhone(Integer.parseInt(phone));
+            patient.setPatientPhone(Long.parseLong(phone));
         } else throw new CommandException("The entered phone is not correct");
 
         if (birthday != null) {

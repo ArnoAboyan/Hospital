@@ -29,7 +29,8 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             preparedStatement.setString(2, patient.getPatientSurname());
             preparedStatement.setDate(3, patient.getPatientDateOfBirth());
             preparedStatement.setString(4, patient.getPatientGender());
-            preparedStatement.setInt(5, patient.getPatientPhone());
+//            preparedStatement.setInt(5, patient.getPatientPhone());
+            preparedStatement.setLong(5, patient.getPatientPhone());
 
             preparedStatement.executeUpdate();
             logger.info("create method => CORRECT");
@@ -56,7 +57,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             patient.setPatientSurname(resultSet.getString("patient_surname"));
             patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
             patient.setPatientGender(resultSet.getString("gender"));
-            patient.setPatientPhone(resultSet.getInt("phone"));
+            patient.setPatientPhone(resultSet.getLong("phone"));
 
             logger.info("getByID method => CORRECT");
         } catch (SQLException e) {
@@ -82,7 +83,8 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             preparedStatement.setString(2, patient.getPatientSurname());
             preparedStatement.setDate(3, patient.getPatientDateOfBirth());
             preparedStatement.setString(4, patient.getPatientGender());
-            preparedStatement.setInt(5, patient.getPatientPhone());
+            preparedStatement.setLong(5, patient.getPatientPhone());
+//            preparedStatement.setInt(5, patient.getPatientPhone());
             preparedStatement.setInt(6, patientid);
 
             preparedStatement.executeUpdate();
@@ -129,7 +131,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientSurname(resultSet.getString("patient_surname"));
                 patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
                 patient.setPatientGender(resultSet.getString("gender"));
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
 
                 patientList.add(patient);
 
@@ -159,7 +161,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientSurname(resultSet.getString("patient_surname"));
                 patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
                 patient.setPatientGender(resultSet.getString("gender"));
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
 
                 patientList.add(patient);
 
@@ -195,7 +197,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientSurname(resultSet.getString("patient_surname"));
                 patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
                 patient.setPatientGender(resultSet.getString("gender"));
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
 
                 patientList.add(patient);
             }
@@ -252,7 +254,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientSurname(resultSet.getString("patient_surname"));
                 patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
                 patient.setPatientGender(resultSet.getString("gender"));
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
 
                 patientList.add(patient);
             }
@@ -288,7 +290,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientSurname(resultSet.getString("patient_surname"));
                 patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
                 patient.setPatientGender(resultSet.getString("gender"));
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
 
                 patientList.add(patient);
             }
@@ -347,7 +349,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
                 patient.setPatientSurname(resultSet.getString("patient_surname"));
                 patient.setPatientDateOfBirth(resultSet.getDate("patient_date_of_birth"));
                 patient.setPatientGender(resultSet.getString("gender"));
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
 
                 patientList.add(patient);
             }
@@ -372,11 +374,11 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                patient.setPatientPhone(resultSet.getInt("phone"));
+                patient.setPatientPhone(resultSet.getLong("phone"));
             }
 
 
-            if (patient.getPatientPhone() > 0 ) {
+            if (patient.getPatientPhone() != null ) {
                 //if exist
                 logger.info("Find patient by phone number " + phone + " => TRUE ");
                 logger.info("isExistPhoneNumber method => CORRECT");

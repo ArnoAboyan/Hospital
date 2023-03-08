@@ -1,5 +1,6 @@
 package entitys;
 
+import java.math.BigInteger;
 import java.sql.Date;
 
 public class Patient {
@@ -9,7 +10,7 @@ public class Patient {
     private Date patientDateOfBirth;
     private String patientGender;
 
-    private int patientPhone;
+    private Long patientPhone;
 
     private String patientPhoneString;
 
@@ -20,6 +21,7 @@ public class Patient {
     public int getPatientId() {
         return patientId;
     }
+
 
     public void setPatientId(int patientId) {
         this.patientId = patientId;
@@ -57,11 +59,11 @@ public class Patient {
         this.patientGender = patientGender;
     }
 
-    public int getPatientPhone() {
+    public Long getPatientPhone() {
         return patientPhone;
     }
 
-    public void setPatientPhone(int patientPhone) {
+    public void setPatientPhone(Long patientPhone) {
         this.patientPhone = patientPhone;
     }
 
