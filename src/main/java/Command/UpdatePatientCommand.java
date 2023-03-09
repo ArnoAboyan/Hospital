@@ -38,7 +38,9 @@ public class UpdatePatientCommand implements Command{
             patient.setPatientSurname(surname);
         } else throw new CommandException("The entered surname is not correct");
         // phone namber validation
-        if (phone.matches("(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?\\d{3}\\d{4}")) {
+
+//        if (phone.matches("(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?\\d{3}\\d{5}")) {
+        if (phone.matches("[8]{1}[0]{1}[0-9]{9}")) {
             patient.setPatientPhone(Long.parseLong(phone));
         } else throw new CommandException("The entered phone is not correct");
 

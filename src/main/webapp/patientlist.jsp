@@ -165,8 +165,8 @@
                                                         <div>
                                                             <label for="updatephone"><fmt:message key="admin_jsp.patientlistEnteraphonenumber"/></label>
                                                             <input type="number" id="updatephone" name="phone"
-                                                                   value="0${patient.patientPhone}"
-                                                                   pattern="(\+\d{1,2}\s)?\(?\d{3}\)?\d{3}\d{4}" required></div>
+                                                                   value="${patient.patientPhone}"
+                                                                   pattern="[8]{1}[0]{1}[0-9]{9}" required></div>
                                                     </div>
                                                     <div class="mb-3">
                                                         <div>

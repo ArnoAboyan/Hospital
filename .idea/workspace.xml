@@ -9,13 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v2.3 bugfix">
+    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v2.4 bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/AddPatientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AddPatientCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/FIX add" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/FIX add" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Command/UpdatePatientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/UpdatePatientCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/patientlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patientlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +325,9 @@
       <workItem from="1675948314030" duration="7133000" />
       <workItem from="1676123559359" duration="1479000" />
       <workItem from="1678273651661" duration="2095000" />
-      <workItem from="1678275936332" duration="309000" />
+      <workItem from="1678275936332" duration="1224000" />
+      <workItem from="1678280236670" duration="871000" />
+      <workItem from="1678364487083" duration="4521000" />
     </task>
     <task id="LOCAL-00001" summary="v1 created">
       <created>1674489012404</created>
@@ -473,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675865387968</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="v2.4 bugfix">
+      <created>1678276366541</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678276366541</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,31 +514,12 @@
     <MESSAGE value="v2.1 bugfix" />
     <MESSAGE value="v2.2 Session_bugfix" />
     <MESSAGE value="v2.3 bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.3 bugfix" />
+    <MESSAGE value="v2.4 bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.4 bugfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java</url>
-          <line>375</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java</url>
-          <line>376</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Command/AddPatientCommand.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Command/AddPatientCommand.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/entitys/Patient.java</url>
           <line>12</line>
@@ -545,14 +536,14 @@
     <SUITE FILE_PATH="coverage/Hospital$AddPatientCommandTest_execute.ic" NAME="AddPatientCommandTest.execute Coverage Results" MODIFIED="1675169229841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Command.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1675865331813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1678374330928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest_executeWithOutSort.ic" NAME="AppointmentListCommandTest.executeWithOutSort Coverage Results" MODIFIED="1674932527756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Hospital$AddAppointmentCommandTest_executeTest.ic" NAME="AppointmentListCommandTest.executeTest Coverage Results" MODIFIED="1674933335632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hospital$Tomcat_10.ic" NAME="Tomcat 10 Coverage Results" MODIFIED="1675284327118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hospital$Tomcat_10.ic" NAME="Tomcat 10 Coverage Results" MODIFIED="1678373958019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest_executeTest__1_.ic" NAME="AppointmentListCommandTest.executeTest (1) Coverage Results" MODIFIED="1675101885857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Command.*</FILTER>
     </SUITE>

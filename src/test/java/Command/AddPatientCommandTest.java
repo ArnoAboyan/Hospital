@@ -81,7 +81,7 @@ class AddPatientCommandTest {
 
         when(req.getParameter("name")).thenReturn(patient.getPatientName());
         when(req.getParameter("surname")).thenReturn(patient.getPatientSurname());
-        when(req.getParameter("phone")).thenReturn("0994455566");
+        when(req.getParameter("phone")).thenReturn("80994455566");
         when(req.getParameter("birthday")).thenReturn(dateofbirth);
         when(req.getParameter("gender")).thenReturn(patient.getPatientGender());
 
