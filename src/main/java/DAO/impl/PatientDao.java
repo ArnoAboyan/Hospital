@@ -378,7 +378,7 @@ public class PatientDao implements EntityDAO<Integer, Patient> {
             }
 
 
-            if (patient.getPatientPhone() != null ) {
+            if (patient.getPatientPhone() != null) {
                 //if exist
                 logger.info("Find patient by phone number " + phone + " => TRUE ");
                 logger.info("isExistPhoneNumber method => CORRECT");

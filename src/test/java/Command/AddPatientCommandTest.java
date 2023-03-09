@@ -81,7 +81,7 @@ class AddPatientCommandTest {
 
         when(req.getParameter("name")).thenReturn(patient.getPatientName());
         when(req.getParameter("surname")).thenReturn(patient.getPatientSurname());
-        when(req.getParameter("phone")).thenReturn("80994455566");
+        when(req.getParameter("phone")).thenReturn("80334445511");
         when(req.getParameter("birthday")).thenReturn(dateofbirth);
         when(req.getParameter("gender")).thenReturn(patient.getPatientGender());
 
@@ -92,7 +92,7 @@ class AddPatientCommandTest {
 
         when(con.prepareStatement(AttributFinal.CHECK_PATIENT_AVAILABILITY_BY_PHONE)).thenReturn(psOne);
         when(psOne.executeQuery()).thenReturn(rsOne);
-        when(rsOne.next()).thenReturn(true).thenReturn(false);
+        when(rsOne.next()).thenReturn(false);
 
 
 
