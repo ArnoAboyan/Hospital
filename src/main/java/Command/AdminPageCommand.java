@@ -23,7 +23,7 @@ public class AdminPageCommand implements Command{
         Doctor user = (Doctor) req.getSession().getAttribute("currentUser");
 
         if(user==null){
-            return "login.jsp";
+            return "index.jsp";
         }
 
         String role = user.getRole().getTitle();

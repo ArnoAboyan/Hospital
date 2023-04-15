@@ -1,7 +1,10 @@
 package entitys;
 
+import Command.CommandException;
+
 public enum Category {
     ONKOLOGIST (1,"onkologist"),
+
     TRAUMATOLOGIST (2, "traumatologist"),
     OPHTHALMOLOGIST (3, "ophthalmologist"),
     DENTIST (4, "dentist"),
@@ -27,7 +30,7 @@ public enum Category {
         return id;
     }
 
-    public static Integer getIDByName(String title) {
+    public static Integer getIDByName(String title) throws CommandException {
         if (title.equalsIgnoreCase("onkologist")){
            return 1;
         }
@@ -53,7 +56,7 @@ public enum Category {
             return 8;
         }
         else {
-            throw new IllegalArgumentException("Incorrect id, do not have role for this");
+            throw new CommandException("Doctor category not found");
         }
     }
 }

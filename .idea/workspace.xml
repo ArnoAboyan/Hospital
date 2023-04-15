@@ -9,12 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v2.5 bugfix">
+    <list default="true" id="da4ee309-2267-414b-82b9-b1bfaa5d8ff9" name="Changes" comment="v2.6 bugfix">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/impl/PatientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/AddPatientCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Command/UpdatePatientCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Command/UpdatePatientCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AdminPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AdminPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/AppointmentListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/AppointmentListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/ChangeHospitalCardCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/ChangeHospitalCardCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/HospitalCardById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/HospitalCardById.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/HospitalCardList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/HospitalCardList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Command/PatientListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Command/PatientListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/WIZ/IdeaProjects/Hospital/src/main/resources&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.37816092&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;coverage&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/WIZ/IdeaProjects/Hospital",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.37816092",
+    "settings.editor.selected.configurable": "inlay.hints"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\WIZ\IdeaProjects\Hospital\src\main\resources" />
@@ -88,7 +100,7 @@
       <recent name="filter" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestWithCoverage">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10">
     <configuration name="AddDoctorCommandTest.executeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hospital" />
       <extension name="coverage">
@@ -325,7 +337,11 @@
       <workItem from="1678273651661" duration="2095000" />
       <workItem from="1678275936332" duration="1224000" />
       <workItem from="1678280236670" duration="871000" />
-      <workItem from="1678364487083" duration="5719000" />
+      <workItem from="1678364487083" duration="5802000" />
+      <workItem from="1678974251585" duration="809000" />
+      <workItem from="1680952403952" duration="3515000" />
+      <workItem from="1681064201217" duration="642000" />
+      <workItem from="1681569394921" duration="2808000" />
     </task>
     <task id="LOCAL-00001" summary="v1 created">
       <created>1674489012404</created>
@@ -488,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678376118774</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="v2.6 bugfix">
+      <created>1678377372479</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678377372479</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +544,8 @@
     <MESSAGE value="v2.3 bugfix" />
     <MESSAGE value="v2.4 bugfix" />
     <MESSAGE value="v2.5 bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.5 bugfix" />
+    <MESSAGE value="v2.6 bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.6 bugfix" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest.ic" NAME="AppointmentListCommandTest Coverage Results" MODIFIED="1674933213771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -530,7 +554,7 @@
     <SUITE FILE_PATH="coverage/Hospital$AddPatientCommandTest_execute.ic" NAME="AddPatientCommandTest.execute Coverage Results" MODIFIED="1675169229841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Command.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1678377149699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Hospital$TestWithCoverage.ic" NAME="TestWithCoverage Coverage Results" MODIFIED="1678377350546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Hospital$AppointmentListCommandTest_executeWithOutSort.ic" NAME="AppointmentListCommandTest.executeWithOutSort Coverage Results" MODIFIED="1674932527756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Hospital.Command.*</FILTER>
     </SUITE>

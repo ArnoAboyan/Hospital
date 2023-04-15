@@ -313,7 +313,7 @@
                     </div>
                     <div class="mb-3">
                         <select class="form-select" name="category" id="selectCategory"
-                                aria-label="Default select example">
+                                aria-label="Default select example" required>
                             <option selected><fmt:message key="admin_jsp.doctorSelectcategory"/></option>
                             <option value="onkologist">onkologist</option>
                             <option value="traumatologist">traumatologist</option>

@@ -1,5 +1,7 @@
 package entitys;
 
+import Command.CommandException;
+
 public enum Role {
 
     ADMIN (1,"admin"),
@@ -23,7 +25,7 @@ public enum Role {
         return id;
     }
 
-    public static Integer getIDByName(String title) {
+    public static Integer getIDByName(String title) throws CommandException {
         if (title.equalsIgnoreCase("admin")) {
             return 1;
         } else if (title.equalsIgnoreCase("doctor")) {
@@ -31,7 +33,7 @@ public enum Role {
         } else if (title.equalsIgnoreCase("nurse")) {
             return 3;
         } else {
-            throw new IllegalArgumentException("Incorrect id, do not have role for this");
+            throw new CommandException("Role not found");
         }
     }
 }

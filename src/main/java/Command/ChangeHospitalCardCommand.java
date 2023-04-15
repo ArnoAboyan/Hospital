@@ -19,7 +19,7 @@ public class ChangeHospitalCardCommand implements Command {
 
         //check role
         if (user == null) {
-            return "login.jsp";
+            return "index.jsp";
         }
 
         String role = user.getRole().getTitle();
